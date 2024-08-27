@@ -29,6 +29,25 @@ export default {
     vn: "1195px",
     // => @media (min-width: 1145px) { ... }
   },
+  plugins: [
+      function ({ addUtilities }: { addUtilities: any }) {
+        const newUtilities = {
+          ".perspective": {
+            perspective: "1000px",
+          },
+          ".preserve-3d": {
+            transformStyle: "preserve-3d",
+          },
+          ".backface-hidden": {
+            backfaceVisibility: "hidden",
+          },
+          ".rotate-y-180": {
+            transform: "rotateY(180deg)",
+          },
+        };
+        addUtilities(newUtilities, ["responsive", "hover"]);
+      },
+    ],
 } as Config;
 
 // tailwind.config.js
