@@ -6,19 +6,19 @@ import HeroSection from "@/components/Hero";
 import Accordion from "@/components/Accordian";
 import {Footer }from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
+import Hero from "@/components/hero2";
 //style={{ backgroundImage: 'url("/actualBg.png")', }}
 export default function Home() {
   return (
     <main>
-      <div
-        className="w-full h-screen flex-col justify-center"
-        style={{ backgroundImage: 'url("/actualBg.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className=" fixed top-3/4 w-full h-full">
-          <div className="z-10"><HeroSection /></div>
+      
+        <div className="h-screen flex-row-reverse align-bottom items-end">
+          <div className="z-10"> 
+            {/* <Hero/> */}
+            <HeroSection /> 
+          </div>
         </div>
-        
-      </div>
+      
       <div>
         <AboutUs
           imageUrl="/Map Wrap.png"

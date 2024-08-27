@@ -6,7 +6,13 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --classic-pink: rgba(204, 50, 114, 1);
+  --darkblue: rgba(39, 42, 82, 1);
+  --lightpink: rgba(228, 185, 216, 1);
+  --thegreen: rgba(6, 82, 93, 1);
+  --thered: rgba(88, 16, 22, 1);
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {

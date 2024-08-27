@@ -1,24 +1,57 @@
-import { url } from 'inspector';
-import React,{useState} from 'react';
-
-import { ReactTyped, Typed } from "react-typed";
-// Import the 'Typed' component correctly
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import { ReactTyped } from "react-typed";
 
 const HeroSection = () => {
+  const [showText, setShowText] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowText(true);
+    }, 12000);
+  }, []);
+
   return (
-    
-      <div className="h-screen w-full flex flex-row md:flex-col lg:flex-col">
-        
+    <div className="h-screen w-full flex flex-row md:flex-col lg:flex-col">
+      <div
+        className="h-full flex justify-center"
+        style={{
+          backgroundImage: 'url("/actualBg.png")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}>
+        <div className="flex-col justify-center mt-[50vh]">
+          {showText && (
+            <Image
+              src={"/bnb logo.png"}
+              alt="bnb logo"
+              width={600}
+              height={600}
+            />
+          )}
+
           <ReactTyped
-            strings={["WELCOME!", "PICK YOUR POISON", "ARE YOU READY?"]}
+            strings={["WELCOME!", "ARE YOU READY?", "PICK YOUR POISON"]}
             typeSpeed={60}
             backSpeed={30}
             showCursor={false}
             backDelay={2000}
-            loop
-            className="text-4xl md:text-5xl font-squid font-bold flex justify-center text-white"
+            loop={false}
+            className="text-4xl sm:text-2xl md:text-5xl font-squid font-bold flex justify-center text-white"
           />
+          {showText && (
+            <div className="flex  justify-center mt-4">
+              <button className=" text-white font-bold py-2 px-4 rounded mr-2">
+                know more
+              </button>
+              <button className=" text-white font-bold py-2 px-4 rounded mr-2 border-pink-700">
+                Register
+              </button>
+            </div>
+          )}
+        </div>
       </div>
+    </div>
   );
 };
 
