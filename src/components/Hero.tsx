@@ -6,19 +6,19 @@ import { ReactTyped, Typed } from "react-typed";
 
 const HeroSection = () => {
   return (
-    <div className='h-screen w-full'>
-      <div className="flex flex-row md:flex-col lg:flex-col">
-        <h1>
+    
+      <div className="h-screen w-full flex flex-row md:flex-col lg:flex-col">
+        
           <ReactTyped
-            strings={["WELCOME", "PICK YOUR POISON", "ARE YOU READY?"]}
-            typeSpeed={20}
-            backSpeed={10}
+            strings={["WELCOME!", "PICK YOUR POISON", "ARE YOU READY?"]}
+            typeSpeed={60}
+            backSpeed={30}
+            showCursor={false}
+            backDelay={2000}
             loop
-            className="text-3xl md:text-5xl font-bold flex justify-center text-white"
+            className="text-4xl md:text-5xl font-squid font-bold flex justify-center text-white"
           />
-        </h1>
       </div>
-    </div>
   );
 };
 

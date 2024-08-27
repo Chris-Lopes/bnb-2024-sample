@@ -6,16 +6,18 @@ import HeroSection from "@/components/Hero";
 import Accordion from "@/components/Accordian";
 import {Footer }from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
+//style={{ backgroundImage: 'url("/actualBg.png")', }}
 export default function Home() {
-
-
-
   return (
     <main>
       <div
         className="w-full h-screen flex-col justify-center"
-        style={{ backgroundImage: 'url("/actualBg.png")', }}>
-        <HeroSection />
+        style={{ backgroundImage: 'url("/actualBg.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        <div className=" fixed top-3/4 w-full h-full">
+          <div className="z-10"><HeroSection /></div>
+        </div>
+        
       </div>
       <div>
         <AboutUs

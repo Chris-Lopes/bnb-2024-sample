@@ -18,7 +18,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageUrl, title, description }) => {
           />
         </div>
         <div className="md:w-1/2 md:pl-8">
-          <h2 className="text-3xl flex justify-center font-bold mb-4">{title}</h2>
+          <h2 className="text-3xl font-squid flex justify-center font-bold mb-4">{title}</h2>
         {description.map((description,id) => (
           <p key={id} className="text-gray-400 pb-3">{description}</p>
         ))}

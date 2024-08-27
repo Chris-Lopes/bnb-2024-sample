@@ -1,9 +1,34 @@
-import React from "react";
- import { FaGlobe } from "react-icons/fa";
+'use client'
+import React, { useState, useEffect } from "react";
+import { FaGlobe } from "react-icons/fa";
 
 export const NavBar = (): JSX.Element => {
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleScroll = () => {
+    if (window.scrollY > lastScrollY) {
+      // Scrolling down
+      setShowNav(true);
+    } else {
+      // Scrolling up
+      setShowNav(false);
+    }
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <div className="relative w-full text-white py-4 bg-transparent">
+    <div
+      className={`fixed w-full text-white py-4 bg-transparent transition-transform duration-300 ${
+        showNav ? "translate-y-0" : "-translate-y-full"
+      }`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <img
@@ -46,10 +71,8 @@ export const NavBar = (): JSX.Element => {
         </div>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-            <div className="flex items-center space-x-2">
-                <FaGlobe />
-                <span className="font-bold">EN</span>
-            </div>
+            <FaGlobe />
+            <span className="font-bold">EN</span>
           </div>
           <button className="bg-slate-200 text-black font-medium px-4 py-2 rounded-xl">
             LogIn
