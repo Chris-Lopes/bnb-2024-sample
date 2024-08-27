@@ -13,7 +13,6 @@
   --thered: rgba(88, 16, 22, 1);
 }
 
-
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -41,6 +40,12 @@ body {
 @font-face {
   font-family: "Squid";
   src: url("/fonts/squid.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sharp";
+  src: url("/fonts/SharpGrotesk-Medium15.otf");
   font-style: normal;
 }
 
