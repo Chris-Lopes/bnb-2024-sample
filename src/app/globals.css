@@ -31,3 +31,9 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: "Squid";
+  src: url("/fonts/squid.ttf");
+  font-style: normal;
+}

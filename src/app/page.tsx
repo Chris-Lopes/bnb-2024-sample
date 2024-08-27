@@ -1,10 +1,15 @@
 'use client'
+import Image from "next/image";
+import localFont from "next/font/local";
 import React from "react";
 import HeroSection from "@/components/Hero";
 import Accordion from "@/components/Accordian";
 import {Footer }from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
-const Page: React.FC = () => {
+export default function Home() {
+
+
+
   return (
     <main>
       <div
@@ -29,4 +34,4 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
+
