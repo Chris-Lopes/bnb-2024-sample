@@ -26,7 +26,7 @@ export const NavBar = (): JSX.Element => {
 
   return (
     <div
-      className={`fixed w-full text-white py-4 bg-transparent transition-transform duration-300 ${
+      className={`fixed w-full text-white py-4 bg-opacity-50 bg-black transition-transform duration-300 ${
         showNav ? "translate-y-0" : "-translate-y-full"
       }`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
