@@ -7,7 +7,9 @@ import Accordion from "@/components/Accordian";
 import {Footer }from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
 import Hero from "@/components/hero2";
+import VerticalTimeline from "@/components/timeline2";
 import Sponsers from "@/components/Sponsers";
+import Card from "@/components/squidcard";
 //style={{ backgroundImage: 'url("/actualBg.png")', }}
 export default function Home() {
   return (
@@ -31,7 +33,13 @@ export default function Home() {
         />
       </div>
       <div>
+        <VerticalTimeline />
+      </div>
+      <div>
         <Accordion />
+      </div>
+      <div>
+        <Card />
       </div>
       <Sponsers/>
     </main>
