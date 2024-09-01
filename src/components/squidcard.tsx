@@ -1,53 +1,60 @@
-import { useState } from "react";
+import React,{useState} from "react";
+interface CardProps {
+  frontcontent: React.ReactNode;
+  backcontent: React.ReactNode;
+}
 
-const Card: React.FC = () => {
-  const [flipped, setFlipped] = useState(false);
- const HandleFlip = () => {
-    setFlipped(!flipped);
-  }
+const Card: React.FC<CardProps> = ({ frontcontent, backcontent }) => {
+    const [isFlipped, setIsFlipped] = useState(false);
+    const handleFFlip = () => {
+        setIsFlipped(!isFlipped);
+    }
+
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-800">
+    <div className="flex items-center justify-center m-auto h-full ">
       <div
-        className={`relative w-48 h-28 cursor-pointer perspective ${
-          flipped ? "flipped" : ""
-        }`}
-        onClick={HandleFlip}
-      >
-        {/* Front Side */}
-        <div className="absolute inset-0 bg-gray-100 text-black flex items-center justify-center rounded-lg transform transition-transform duration-500 preserve-3d">
-          <div className="flex space-x-4 text-5xl">
-            <div>○</div>
-            <div>△</div>
-            <div>□</div>
+        className={`relative w-full h-full card cursor-pointer ${
+          isFlipped ? "card-back-flip" : "card-front-flip"
+        }`} 
+        onClick={handleFFlip}>
+        {
+          <div className="absolute card-front inset-0 text-black flex items-center justify-center rounded-lg ">
+            <div className="flex text-5xl">
+              <div>{frontcontent}</div>
+            </div>
           </div>
-        </div>
-
-        {/* Back Side */}
-        <div className="absolute inset-0 bg-gray-900 text-white flex items-center justify-center rounded-lg transform transition-transform duration-500 preserve-3d rotate-y-180">
-          <p>Join the Game!</p>
-        </div>
+        }
+        {
+          <div className="absolute card-back  inset-0 text-white flex items-center justify-center rounded-lg ">
+            <div>{backcontent}</div>
+          </div>
+        }
       </div>
 
       <style jsx>{`
-        .perspective {
-          perspective: 1000px;
-        }
-
-        .preserve-3d {
-          backface-visibility: hidden;
+        .card {
           transform-style: preserve-3d;
+          perspective: 1000px;
+          transition: 0.5s;
+        }
+        .card-front-flip {
+          transform: rotateX(-180deg);
+        }
+        .card-back-flip {
+          transform: rotateX(0deg);
         }
 
-        .rotate-y-180 {
-          transform: rotateY(180deg);
+        .card-front {
+          backface-visibility: hidden;
+          transform: rotateX(0deg);
+          transition: 0.5s;
         }
 
-        .flipped .front {
-          transform: rotateY(180deg);
-        }
-
-        .flipped .back {
-          transform: rotateY(0deg);
+        .card-back {
+          backface-visibility: hidden;
+          transform: rotateX(180deg);
+          transition: 0.5s;
+          
         }
       `}</style>
     </div>

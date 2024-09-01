@@ -49,40 +49,6 @@ body {
   font-style: normal;
 }
 
-.perspective {
-  perspective: 1000px;
-}
-
-/* .preserve-3d {
-  transform-style: preserve-3d;
-}
-
-.backface-hidden {
-  backface-visibility: hidden;
-} 
-
-.rotate-y-180 {
-  transform: rotateY(180deg);
-}
-
-
-
-.preserve-3d {
-  backface-visibility: hidden;
-   transform-style: preserve-3d; 
-}
-
-
-
-.flipped .front {
-  transform: rotateY(180deg);
-}
-
-.flipped .back {
-  transform: rotateY(0deg);
-}
-*/
-
 @keyframes slide-in {
   from {
     opacity: 0;
