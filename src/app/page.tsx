@@ -34,9 +34,8 @@ export default function Home() {
           ]}
         />
       </div>
-      <Domains/>
+      <Domains />
       <Prizes />
-
       <div>
         <VerticalTimeline />
       </div>
@@ -44,41 +43,27 @@ export default function Home() {
       <div>
         <Accordion />
       </div>
-      <div className="flex-col justify-center my-20 space-x-[500px]">
+      <div className="w-full h-full text-slate-50">
         <Card
           frontcontent={
-            <Image
-              src="/squidcard.png"
-              alt="Picture of the author"
-              width={200}
-              height={200}
-            />
-          }
-          backcontent={
-            <div className="bg-[url('/squidcardtexture.png')] bg-repeat px-16 py-8">
-              <h1>
-                1st prize <br />
-                <span> 50,000 </span>
-              </h1>
+            <div className="flex flex-col items-center">
+              <Image
+                src="/bnb logo.png"
+                alt="BitnBuild"
+                width={700}
+                height={600}
+              />
+              <h1 className="text-3xl font-squid">BitnBuild</h1>
+              <p className="text-lg">Organised by GDSC-CRCE</p>
             </div>
           }
-        />
-
-        <Card
-          frontcontent={
-            <Image
-              src="/bnb logo.png"
-              alt="Picture of the author"
-              width={200}
-              height={200}
-            />
-          }
           backcontent={
-            <div className="bg-[url('/squidcardtexture.png')] bg-repeat px-16 py-8">
-              <h1>
-                2nd prize <br />
-                <span> 25,000 </span>
-              </h1>
+            <div className="flex flex-col items-center">
+              <h1 className="text-3xl font-bold">About Us</h1>
+              <p className="text-lg">
+                We are a community of developers who love to code and build
+                projects.
+              </p>
             </div>
           }
         />
