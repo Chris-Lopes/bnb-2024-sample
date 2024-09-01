@@ -37,7 +37,7 @@ export default function Home() {
       <div>
         <Accordion />
       </div>
-      <div className="flex-col justify-center  space-x-[500px]">
+      <div className="flex-col justify-center my-20 space-x-[500px]">
         <Card
           frontcontent={
             <Image

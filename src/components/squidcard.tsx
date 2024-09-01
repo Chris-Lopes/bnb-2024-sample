@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({ frontcontent, backcontent }) => {
     <div className="flex items-center justify-center m-auto h-full ">
       <div
         className={`relative w-full h-full card cursor-pointer ${
-          isFlipped ? "card-back-flip" : "card-front-flip"
+          isFlipped ? "card-front-flip" : "card-back-flip"
         }`} 
         onClick={handleFFlip}>
         {
@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({ frontcontent, backcontent }) => {
           </div>
         }
         {
-          <div className="absolute card-back  inset-0 text-white flex items-center justify-center rounded-lg ">
+          <div className="absolute card-back  inset-0 text-black flex items-center justify-center rounded-lg ">
             <div>{backcontent}</div>
           </div>
         }
