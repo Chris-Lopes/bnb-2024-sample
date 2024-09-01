@@ -11,6 +11,7 @@ import VerticalTimeline from "@/components/timeline2";
 import Sponsers from "@/components/Sponsers";
 import Prizes from "@/components/Prizes";
 import Card from "@/components/squidcard";
+import Domains from "@/components/Domains";
 //style={{ backgroundImage: 'url("/actualBg.png")', }}
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
           ]}
         />
       </div>
-      {/* Domains */}
+      <Domains/>
       <Prizes />
 
       <div>

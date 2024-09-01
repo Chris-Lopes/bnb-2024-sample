@@ -13,7 +13,7 @@ const Prizes = () => {
         className="absolute inset-0 -z-10 bg-cover bg-center"
         style={backgroundStyle}
       ></div>
-      <h1 className="text-8xl text-center ">Prizes!</h1>
+      <h1 className="text-8xl text-center font-squid ">Prizes!</h1>
       <div className="flex md:flex-row flex-col w-full justify-between container mx-auto text-center items-center">
         <div className="">
           <Image
@@ -21,9 +21,9 @@ const Prizes = () => {
             alt="prize2"
             height={10000}
             width={10000}
-            className="w-full md:mt-60 rounded-full shadow-lg hover:scale-105 ease-in-out duration-300 hover:shadow-xl hover:shadow-thered shadow-thered mb-6"
+            className="w-full md:mt-60 rounded-full shadow-lg hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-thered shadow-thered mb-6"
           />
-          <h2 className="text-4xl">
+          <h2 className="text-4xl font-squid">
             2nd Prize <br /> 25,000₹
           </h2>
         </div>
@@ -33,9 +33,9 @@ const Prizes = () => {
             alt="prize1"
             height={10000}
             width={10000}
-            className="w-full rounded-full shadow-lg shadow-thered mb-6 hover:scale-105 ease-in-out duration-300 hover:shadow-xl hover:shadow-thered"
+            className="w-full rounded-full shadow-lg shadow-thered mb-6 hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-thered"
           />
-          <h2 className="text-4xl">
+          <h2 className="text-4xl font-squid">
             1st Prize <br /> 50,000₹
           </h2>
         </div>
@@ -45,9 +45,9 @@ const Prizes = () => {
             alt="prize3"
             height={10000}
             width={10000}
-            className="w-full md:mt-60 rounded-full shadow-lg shadow-thered mb-6 hover:scale-105 ease-in-out duration-300 hover:shadow-xl hover:shadow-thered"
+            className="w-full md:mt-60 rounded-full shadow-lg shadow-thered mb-6 hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-thered"
           />
-          <h2 className="text-4xl">
+          <h2 className="text-4xl font-squid">
             3rd Prize <br /> 10,000₹
           </h2>
         </div>
