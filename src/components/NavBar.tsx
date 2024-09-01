@@ -80,7 +80,7 @@ export const NavBar = (): JSX.Element => {
             <span className="font-bold">EN</span>
           </div>
           <button className="bg-slate-200 text-black font-medium px-4 py-2 rounded-xl">
-            LogIn
+            Register
           </button>
         </div>
       </div>
