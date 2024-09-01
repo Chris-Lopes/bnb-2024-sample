@@ -32,7 +32,9 @@ export default function Home() {
           ]}
         />
       </div>
-      <Prizes/>
+      <Prizes />
+
+      <Sponsers />
       <div>
         <VerticalTimeline />
       </div>
@@ -78,7 +80,6 @@ export default function Home() {
           }
         />
       </div>
-      <Sponsers />
     </main>
   );
 }
