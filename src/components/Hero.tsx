@@ -19,7 +19,8 @@ const HeroSection = () => {
           backgroundImage: 'url("/actualBg.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
-        }}>
+        }}
+      >
         <div className="flex-col justify-center mt-[50vh]">
           {showText && (
             <Image
@@ -27,6 +28,7 @@ const HeroSection = () => {
               alt="bnb logo"
               width={600}
               height={600}
+              priority
             />
           )}
 

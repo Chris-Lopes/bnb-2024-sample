@@ -12,6 +12,16 @@ export default {
   darkMode: ["class"],
   theme: {
     extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+        squid: ["Squid", "sans-serif"],
+        sharp: ["Sharp", "sans-serif"],
+      },
       colors: {
         "classic-pink": "var(--classic-pink)",
         darkblue: "var(--darkblue)",
@@ -21,15 +31,15 @@ export default {
       },
     },
   },
-  fontFamily: {
-    sans: ["var(--font-sans)", ...fontFamily.sans],
-    squid: ["Squid", "sans-serif"],
-    sharp: ["Sharp", "sans-serif"],
-  },
-  screens: {
-    vn: "1195px",
-    // => @media (min-width: 1145px) { ... }
-  },
-} as Config;
+  plugins: [addVariablesForColors],
+} satisfies Config;
 
-// tailwind.config.js
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+  addBase({
+    ":root": newVars,
+  });
+}

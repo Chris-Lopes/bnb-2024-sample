@@ -30,35 +30,39 @@ export const Footer = (): JSX.Element => {
         </div>
         <div className="border-t border-gray-700 py-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-center md:text-left">
-            © Copyright 2022, All Rights Reserved by GDSC-CRCE
+            © Copyright 2024, All Rights Reserved by GDSC-CRCE
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a
               className="bg-slate-800 p-2 rounded-full hover:bg-blue-600"
               href="https://twitter.com"
               rel="noopener noreferrer"
-              target="_blank">
+              target="_blank"
+            >
               <FaTwitter className="w-4 h-4 text-white" />
             </a>
             <a
               className=" p-2 bg-slate-800 hover:bg-blue-600 rounded-full"
               href="https://facebook.com"
               rel="noopener noreferrer"
-              target="_blank">
+              target="_blank"
+            >
               <FaFacebookF className="w-4 h-4 text-white" />
             </a>
             <a
               className="bg-slate-800 hover:bg-blue-600 p-2 rounded-full"
               href="https://www.instagram.com/gdsc_crce/"
               rel="noopener noreferrer"
-              target="_blank">
+              target="_blank"
+            >
               <FaInstagram className="w-4 h-4 text-white" />
             </a>
             <a
               className="bg-slate-800 p-2 hover:bg-blue-600 rounded-full"
               href="https://github.com/gdsc_crce/"
               rel="noopener noreferrer"
-              target="_blank">
+              target="_blank"
+            >
               <FaGithub className="w-4 h-4 text-white" />
             </a>
           </div>
