@@ -20,9 +20,8 @@ export default function Home() {
       <div className="h-screen flex-row-reverse align-bottom items-end">
         <div className="z-10">
           {/* <Hero/> */}
-          {/* <HeroSection /> */}
-          <img src="/heroimg.png" alt="" className="z=10 w-full h-screen overflow-y-hidden"/>
-      </div>
+          <HeroSection />
+        </div>
       </div>
 
       <div>

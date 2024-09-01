@@ -8,7 +8,7 @@ const HeroSection = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowText(true);
-    }, 12000);
+    }, 6300);
   }, []);
 
   return (
@@ -16,9 +16,9 @@ const HeroSection = () => {
       <div
         className="h-full flex justify-center"
         style={{
-          backgroundImage: 'url("/actualBg.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundImage: ` linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1)),  url('/actualBg.png')`,
         }}
       >
         <div className="flex-col justify-center mt-[50vh]">
@@ -34,19 +34,20 @@ const HeroSection = () => {
 
           <ReactTyped
             strings={["WELCOME!", "ARE YOU READY?", "PICK YOUR POISON"]}
-            typeSpeed={60}
+            typeSpeed={50}
             backSpeed={30}
             showCursor={false}
-            backDelay={2000}
+            backDelay={1000}
             loop={false}
+            
             className="text-4xl sm:text-2xl md:text-5xl font-squid font-bold flex justify-center text-white"
           />
           {showText && (
-            <div className="flex  justify-center mt-4">
-              <button className=" text-white font-bold py-2 px-4 rounded mr-2">
+            <div className="flex gap-10  justify-center mt-6">
+              <button className=" text-white bg-thered font-bold text-xl py-4 hover:scale-105 hover:bg-opacity-75 ease-in-out duration-300 px-6 font-squid rounded-full ">
                 know more
               </button>
-              <button className=" text-white font-bold py-2 px-4 rounded mr-2 border-pink-700">
+              <button className=" text-white bg-thered font-bold text-xl py-4 hover:scale-105 hover:bg-opacity-75 ease-in-out duration-300 px-6 font-squid rounded-full  border-pink-700">
                 Register
               </button>
             </div>
