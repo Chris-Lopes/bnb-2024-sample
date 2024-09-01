@@ -15,18 +15,32 @@ import Card from "@/components/squidcard";
 import Domains from "@/components/Domains";
 //style={{ backgroundImage: 'url("/actualBg.png")', }}
 export default function Home() {
+  const backgroundStyle: React.CSSProperties = {
+    backgroundImage: `
+      linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1)),
+      url('/overall_bg.jpg')
+    `,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    filter: "brightness(0.15)",
+  };
+  
+
   return (
     <main>
+      <div
+        className=" absolute inset-0 -z-50 bg-fixed bg-center"
+        style={backgroundStyle}
+      ></div>
       <div className="h-screen flex-row-reverse align-bottom items-end">
         <div className="z-10">
           {/* <Hero/> */}
           <HeroSection />
         </div>
       </div>
-
       <div>
         <AboutUs
-          imageUrl="/Map Wrap.png"
+          imageUrl="/Map_wrap.png"
           title="About Us"
           description={[
             "Welcome to BitnBuild 2024, a global hackathon in Mumbai! A 24-hour event full of creativity, Squid Games.",
@@ -34,17 +48,18 @@ export default function Home() {
           ]}
         />
       </div>
-      <Domains/>
-      <Prizes />
+      <Domains />
 
       <div>
-        <VerticalTimeline />
+        <TimelineDemo />
       </div>
+      <Prizes />
       <Sponsers />
       <div>
         <Accordion />
       </div>
-      <div className="flex-col justify-center my-20 space-x-[500px]">
+      
+      {/* <div className="flex-col justify-center my-20 space-x-[500px]">
         <Card
           frontcontent={
             <Image
@@ -82,10 +97,8 @@ export default function Home() {
             </div>
           }
         />
-      </div>
-      <div>
-        <TimelineDemo />
-      </div>
+      </div> */}
+     
     </main>
   );
 }

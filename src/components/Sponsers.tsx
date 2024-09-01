@@ -3,7 +3,7 @@ import React from "react";
 const Sponsers = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full ">
-      <h1 className="text-8xl mb-20 font-squid">Our Sponsers</h1>
+      <h1 className="md:text-8xl text-3xl mb-20 font-squid">Our Sponsers</h1>
       <div>
         <div className="text-center mb-10">
           <h2 className="relative inline-flex h-full overflow-hidden rounded-xl p-[2px] mb-4 focus:outline-none focus:ring-2 focus:ring-[#df4173] focus:ring-offset-2 focus:ring-offset-[#df4173]">
@@ -60,7 +60,7 @@ const Sponsers = () => {
           <p className="text-2xl"> Yet To Come</p>
         </div>
       </div>
-      <h1 className="text-8xl mb-20 font-squid">Previous Sponsers</h1>
+      <h1 className="md:text-8xl text-3xl mb-20 font-squid">Previous Sponsers</h1>
       <div>
         companies...
       </div>

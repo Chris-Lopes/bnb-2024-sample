@@ -8,13 +8,13 @@ const HeroSection = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowText(true);
-    }, 6300);
+    }, 5300);
   }, []);
 
   return (
     <div className="h-screen w-full flex flex-row md:flex-col lg:flex-col">
       <div
-        className="h-full flex justify-center"
+        className="h-full w-full flex justify-center"
         style={{
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -24,11 +24,13 @@ const HeroSection = () => {
         <div className="flex-col justify-center mt-[50vh]">
           {showText && (
             <Image
-              src={"/bnb logo.png"}
+              src={"/bnb_logo.png"}
               alt="bnb logo"
-              width={600}
+              width={700}
               height={600}
+              quality={100}
               priority
+              className="ease-in-out duration-300"
             />
           )}
 
@@ -37,17 +39,17 @@ const HeroSection = () => {
             typeSpeed={50}
             backSpeed={30}
             showCursor={false}
-            backDelay={1000}
+            backDelay={500}
             loop={false}
             
             className="text-4xl sm:text-2xl md:text-5xl font-squid font-bold flex justify-center text-white"
           />
           {showText && (
-            <div className="flex gap-10  justify-center mt-6">
-              <button className=" text-white bg-thered font-bold text-xl py-4 hover:scale-105 hover:bg-opacity-75 ease-in-out duration-300 px-6 font-squid rounded-full ">
+            <div className="flex gap-10  justify-center duration-200 ease-in-out mt-6">
+              <button className=" text-white bg-thered font-bold md:text-xl py-4 hover:scale-105 hover:bg-opacity-75 ease-in-out duration-300 px-6 font-squid rounded-full ">
                 know more
               </button>
-              <button className=" text-white bg-thered font-bold text-xl py-4 hover:scale-105 hover:bg-opacity-75 ease-in-out duration-300 px-6 font-squid rounded-full  border-pink-700">
+              <button className=" text-white bg-thered font-bold md:text-xl py-4 hover:scale-105 hover:bg-opacity-75 ease-in-out duration-300 px-6 font-squid rounded-full  ">
                 Register
               </button>
             </div>
