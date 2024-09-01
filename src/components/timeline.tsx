@@ -1,7 +1,6 @@
-import Image from "next/image";
+
 import React from "react";
 import { Timeline } from "./acctimeline";
-import { title } from "process";
 
 export function TimelineDemo() {
   const data = [
