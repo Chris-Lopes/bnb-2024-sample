@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
 import Hero from "@/components/hero2";
 import VerticalTimeline from "@/components/timeline2";
+import { TimelineDemo } from "@/components/timeline";
 import Sponsers from "@/components/Sponsers";
 import Prizes from "@/components/Prizes";
 import Card from "@/components/squidcard";
@@ -81,6 +82,9 @@ export default function Home() {
             </div>
           }
         />
+      </div>
+      <div>
+        <TimelineDemo />
       </div>
     </main>
   );
