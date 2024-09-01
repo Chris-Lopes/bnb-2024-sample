@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import { FaGlobe } from "react-icons/fa";
+import { LanguageDropdown } from "./LanguageDropdown";
 
 export const NavBar = (): JSX.Element => {
   const [showNav, setShowNav] = useState(true);
@@ -26,7 +27,7 @@ export const NavBar = (): JSX.Element => {
 
   return (
     <div
-      className={`fixed w-full text-white py-4 bg-opacity-50 bg-black transition-transform duration-300 ${
+      className={`fixed w-full text-white py-4 bg-opacity-50 bg-black transition-transform duration-300 z-50 ${
         showNav ? "translate-y-0" : "-translate-y-full"
       }`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -75,11 +76,8 @@ export const NavBar = (): JSX.Element => {
           </a>
         </div>
         <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-2">
-            <FaGlobe />
-            <span className="font-bold">EN</span>
-          </div>
-          <button className="bg-slate-200 text-black font-medium px-4 py-2 rounded-xl">
+          <LanguageDropdown/>
+          <button className="bg-slate-200 text-black cursor-pointer font-medium px-4 py-2 rounded-xl">
             Register
           </button>
         </div>
