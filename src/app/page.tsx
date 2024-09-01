@@ -8,6 +8,7 @@ import {Footer }from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
 import Hero from "@/components/hero2";
 import Sponsers from "@/components/Sponsers";
+import Prizes from "@/components/Prizes";
 //style={{ backgroundImage: 'url("/actualBg.png")', }}
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
           ]}
         />
       </div>
+      <Prizes/>
       <div>
         <Accordion />
       </div>

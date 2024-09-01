@@ -9,10 +9,10 @@ export const NavBar = (): JSX.Element => {
   const handleScroll = () => {
     if (window.scrollY > lastScrollY && window.scrollY > 100) {
       // Scrolling down
-      setShowNav(true);
+      setShowNav(false);
     } else {
       // Scrolling up
-      setShowNav(false);
+      setShowNav(true);
     }
     setLastScrollY(window.scrollY);
   };
