@@ -46,7 +46,7 @@ export const NavBar = (): JSX.Element => {
           <a
             href="#"
             className="font-medium text-gray-400">
-            About
+            Domains
           </a>
           <a
             href="#"
@@ -56,12 +56,12 @@ export const NavBar = (): JSX.Element => {
           <a
             href="#"
             className="font-medium text-gray-400">
-            Sponsors
+            Timeline
           </a>
           <a
             href="#"
             className="font-medium text-gray-400">
-            Timeline
+            Sponsors
           </a>
           <a
             href="#"

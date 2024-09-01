@@ -9,7 +9,7 @@ const Prizes = () => {
 
 
   return (
-    <div className="relative py-20">
+    <div className="relative py-20 mb-10">
          <div
             className="absolute inset-0 -z-10 bg-cover bg-center"
             style={backgroundStyle}

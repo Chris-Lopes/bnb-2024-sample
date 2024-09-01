@@ -32,12 +32,13 @@ export default function Home() {
           ]}
         />
       </div>
+      {/* Domains */}
       <Prizes />
 
-      <Sponsers />
       <div>
         <VerticalTimeline />
       </div>
+      <Sponsers />
       <div>
         <Accordion />
       </div>
