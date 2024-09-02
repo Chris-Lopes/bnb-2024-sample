@@ -15,23 +15,10 @@ import Card from "@/components/squidcard";
 import Domains from "@/components/Domains";
 //style={{ backgroundImage: 'url("/actualBg.png")', }}
 export default function Home() {
-  const backgroundStyle: React.CSSProperties = {
-    backgroundImage: `
-      linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1)),
-      url('/overall_bg.jpg')
-    `,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    filter: "brightness(0.15)",
-  };
   
 
   return (
     <main>
-      <div
-        className=" absolute inset-0 -z-50 bg-fixed bg-center"
-        style={backgroundStyle}
-      ></div>
       <div className="h-screen flex-row-reverse align-bottom items-end">
         <div className="z-10">
           {/* <Hero/> */}
