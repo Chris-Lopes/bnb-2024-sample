@@ -74,16 +74,16 @@ const HeroSection = () => {
         style={{
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.7)), url('/actualBg.png')`,
+          backgroundImage: ` linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1)),  url('/actualBg.png')`,
         }}
       >
-        <div className="flex flex-col items-center justify-center mt-[-10vh] space-y-6">
+        <div className="flex flex-col items-center justify-center mt-[30vh] space-y-6">
           {showText && (
             <Image
               src="/bnb_logo.png"
               alt="bnb logo"
-              width={400}
-              height={343}
+              width={500}
+              height={1000}
               quality={100}
               priority
               className="ease-in-out duration-300"

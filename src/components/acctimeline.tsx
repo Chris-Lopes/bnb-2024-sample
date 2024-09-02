@@ -12,6 +12,17 @@ interface TimelineEntry {
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+  const backgroundStyle: React.CSSProperties = {
+    backgroundImage: `
+      linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1)),
+      url('/overall_bg.jpg')
+    `,
+    backgroundSize: "contain%",
+    backgroundPosition: "center",
+    filter: "brightness(0.15)",
+  };
+
+
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -33,6 +44,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div className="w-full relative font-squid md:px-10" ref={containerRef}>
+       <div
+        className="absolute inset-0 -z-10 bg-contain min-h-screen bg-center"
+        style={backgroundStyle}
+      ></div>
       <h1 className="md:text-8xl w-full text-center text-3xl pt-10 font-squid">
         Timeline
       </h1>

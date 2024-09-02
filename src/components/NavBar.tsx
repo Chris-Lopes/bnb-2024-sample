@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { LanguageDropdown } from "./LanguageDropdown";
@@ -30,9 +30,10 @@ export const NavBar = (): JSX.Element => {
 
   return (
     <div
-      className={`fixed w-full text-white py-4 bg-opacity-70 bg-black transition-transform duration-300 z-50 ${
+      className={`fixed w-full text-white py-4 bg-opacity-60 bg-black transition-transform duration-300 z-50 ${
         showNav ? "translate-y-0" : "-translate-y-full"
-      }`}>
+      }`}
+    >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <img className="w-24 h-auto" alt="Logo" src="logo.svg" />
@@ -40,30 +41,53 @@ export const NavBar = (): JSX.Element => {
         <div className="md:hidden flex items-center">
           <button
             onClick={toggleMobileMenu}
-            className="text-white focus:outline-none">
+            className="text-white focus:outline-none"
+          >
             {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
         <div className="hidden md:flex space-x-6">
-          <a href="#" className="font-bold hover:text-gray-300 transition-colors duration-200">
+          <a
+            href="#"
+            className="font-bold hover:text-gray-300 transition-colors duration-200"
+          >
             Home
           </a>
-          <a href="#" className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200">
+          <a
+            href="#"
+            className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
+          >
             Domains
           </a>
-          <a href="#" className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200">
-            Prizes
-          </a>
-          <a href="#" className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200">
+          <a
+            href="#"
+            className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
+          >
             Timeline
           </a>
-          <a href="#" className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200">
+          <a
+            href="#"
+            className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
+          >
+            Prizes
+          </a>
+
+          <a
+            href="#"
+            className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
+          >
             Sponsors
           </a>
-          <a href="#" className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200">
+          <a
+            href="#"
+            className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
+          >
             FAQ
           </a>
-          <a href="#" className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200">
+          <a
+            href="#"
+            className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
+          >
             Contact Us
           </a>
         </div>
@@ -79,31 +103,54 @@ export const NavBar = (): JSX.Element => {
         <div
           className={`md:hidden fixed top-0 left-0 w-full h-screen bg-black bg-opacity-90 flex flex-col items-center justify-start pt-16 space-y-6 z-40 ease-in-out transform transition-transform duration-300 ${
             isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-          }`}>
+          }`}
+        >
           <button
             onClick={toggleMobileMenu}
-            className="absolute top-4 right-4 text-white focus:outline-none">
+            className="absolute top-4 right-4 text-white focus:outline-none"
+          >
             <FaTimes size={24} />
           </button>
-          <a href="#" className="font-bold text-white text-xl hover:text-gray-300 transition-colors duration-200">
+          <a
+            href="#"
+            className="font-bold text-white text-xl hover:text-gray-300 transition-colors duration-200"
+          >
             Home
           </a>
-          <a href="#" className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200">
+          <a
+            href="#"
+            className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
+          >
             Domains
           </a>
-          <a href="#" className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200">
-            Prizes
-          </a>
-          <a href="#" className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200">
+          <a
+            href="#"
+            className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
+          >
             Timeline
           </a>
-          <a href="#" className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200">
+          <a
+            href="#"
+            className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
+          >
+            Prizes
+          </a>
+          <a
+            href="#"
+            className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
+          >
             Sponsors
           </a>
-          <a href="#" className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200">
+          <a
+            href="#"
+            className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
+          >
             FAQ
           </a>
-          <a href="#" className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200">
+          <a
+            href="#"
+            className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
+          >
             Contact Us
           </a>
           <div className="flex flex-col items-center space-y-4">
