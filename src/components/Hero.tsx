@@ -1,39 +1,94 @@
-import React, { useEffect, useState } from "react";
+"use client";
+
+import React, { useEffect, useState, useCallback, useMemo } from "react";
 import Image from "next/image";
 import { ReactTyped } from "react-typed";
 
+interface TimeLeft {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
 const HeroSection = () => {
   const [showText, setShowText] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  const targetDate = useMemo(() => new Date("2024-10-26T09:00:00"), []);
+
+  const calculateTimeLeft = useCallback((): TimeLeft => {
+    const difference = +targetDate - +new Date();
+    let timeLeft: TimeLeft = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    };
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+    return timeLeft;
+  }, [targetDate]);
+
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   useEffect(() => {
-    setTimeout(() => {
+    setIsClient(true);
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [calculateTimeLeft]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
       setShowText(true);
     }, 5300);
+    return () => clearTimeout(timer);
   }, []);
 
+  const timerComponents = Object.entries(timeLeft).map(([interval, value]) => (
+    <div
+      key={interval}
+      className="flex flex-col items-center justify-center p-2 m-1"
+    >
+      <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+        {value.toString().padStart(2, "0")}
+      </span>
+      <span className="text-xs md:text-sm uppercase text-white opacity-75">
+        {interval}
+      </span>
+    </div>
+  ));
+
   return (
-    <div className="h-screen w-full flex flex-row md:flex-col lg:flex-col">
+    <div className="h-screen w-full flex flex-col relative">
       <div
-        className="h-full w-full flex justify-center"
+        className="h-full w-full flex flex-col justify-center items-center"
         style={{
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundImage: ` linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1)),  url('/actualBg.png')`,
+          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.7)), url('/actualBg.png')`,
         }}
       >
-        <div className="flex-col justify-center mt-[50vh]">
+        <div className="flex flex-col items-center justify-center mt-[-10vh] space-y-6">
           {showText && (
             <Image
-              src={"/bnb_logo.png"}
+              src="/bnb_logo.png"
               alt="bnb logo"
-              width={700}
-              height={600}
+              width={400}
+              height={343}
               quality={100}
               priority
               className="ease-in-out duration-300"
             />
           )}
-
           <ReactTyped
             strings={["WELCOME!", "ARE YOU READY?", "PICK YOUR POISON"]}
             typeSpeed={50}
@@ -41,19 +96,28 @@ const HeroSection = () => {
             showCursor={false}
             backDelay={500}
             loop={false}
-            
-            className="text-4xl sm:text-2xl md:text-5xl font-squid font-bold flex justify-center text-white"
+            className="text-3xl sm:text-4xl md:text-5xl font-squid font-bold text-white text-center"
           />
           {showText && (
-            <div className="flex gap-10  justify-center duration-200 ease-in-out mt-6">
-              <button className=" text-white bg-thered font-bold md:text-xl py-4 hover:scale-105 hover:bg-opacity-75 ease-in-out duration-300 px-6 font-squid rounded-full ">
-                know more
+            <div className="flex gap-4 justify-center mt-6">
+              <button className="text-white bg-thered font-bold text-lg md:text-xl py-3 px-6 hover:scale-105 hover:bg-opacity-90 ease-in-out duration-300 font-squid rounded-full">
+                Know More
               </button>
-              <button className=" text-white bg-thered font-bold md:text-xl py-4 hover:scale-105 hover:bg-opacity-75 ease-in-out duration-300 px-6 font-squid rounded-full  ">
+              <button className="text-white bg-thered font-bold text-lg md:text-xl py-3 px-6 hover:scale-105 hover:bg-opacity-90 ease-in-out duration-300 font-squid rounded-full">
                 Register
               </button>
             </div>
           )}
+        </div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4">
+        <div className="flex justify-center items-center space-x-4">
+          <span className="text-white text-lg md:text-xl font-squid">
+            Event Starts In:
+          </span>
+          <div className="flex space-x-2">
+            {isClient ? timerComponents : null}
+          </div>
         </div>
       </div>
     </div>
@@ -61,47 +125,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-/*
-<div className="hero-section bg-gradient-to-r from-indigo-600 to-blue-500 text-white min-h-screen flex items-center justify-center">
-      <div className="container mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Our</h1>
-
-        <ReactTyped
-          strings={[
-            "Here you can find anything",
-            "Search for products",
-            "Search for categories",
-            "Search for brands",
-          ]}
-          typeSpeed={40}
-          backSpeed={50}
-          loop
-          className="text-3xl md:text-5xl font-bold text-yellow-300"
-        />
-        <p className="mt-6 text-xl md:text-2xl max-w-2xl mx-auto">
-          Empowering businesses with cutting-edge technology and creative
-          strategies.
-        </p>
-        <div className="mt-8">
-          <a
-            href="#learn-more"
-            className="bg-white text-indigo-600 font-bold py-3 px-6 rounded-full text-lg hover:bg-yellow-300 hover:text-indigo-700 transition duration-300">
-            Learn More
-          </a>
-        </div>
-
-        <div>
-          <button onClick={() => typed?.start()}>Start</button>
-          <button onClick={() => typed?.stop()}>Stop</button>
-          <button onClick={() => typed?.toggle()}>Toggle</button>
-          <button onClick={() => typed?.destroy()}>Destroy</button>
-          <button onClick={() => typed?.reset()}>Reset</button>
-          <ReactTyped
-            typedRef={setTyped}
-            strings={["Here you can find anything"]}
-            typeSpeed={40}
-          />
-        </div>
-      </div>
-    </div>
-*/
