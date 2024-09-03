@@ -15,7 +15,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const backgroundStyle: React.CSSProperties = {
     backgroundImage: `
       linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1)),
-      url('/overall_bg.jpg')
+      url('/overall_bg_1.png')
     `,
     backgroundSize: "contain%",
     backgroundPosition: "center",
