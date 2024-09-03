@@ -56,7 +56,7 @@ const HeroSection = () => {
   const timerComponents = Object.entries(timeLeft).map(([interval, value]) => (
     <div
       key={interval}
-      className="flex flex-col items-center justify-center p-2 m-1"
+      className="flex flex-col items-center border-2 shadow-lg shadow-thegreen border-thegreen rounded-lg  justify-center p-2 m-1"
     >
       <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
         {value.toString().padStart(2, "0")}
@@ -112,7 +112,7 @@ const HeroSection = () => {
       </div>
       <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4">
         <div className="flex justify-center items-center space-x-4">
-          <span className="text-white text-lg md:text-xl font-squid">
+          <span className="text-white text-lg md:text-4xl font-squid">
             Event Starts In:
           </span>
           <div className="flex space-x-2">

@@ -15,8 +15,6 @@ import Card from "@/components/squidcard";
 import Domains from "@/components/Domains";
 //style={{ backgroundImage: 'url("/actualBg.png")', }}
 export default function Home() {
-  
-
   return (
     <main>
       <div className="h-screen flex-row-reverse align-bottom items-end">
@@ -45,16 +43,16 @@ export default function Home() {
       <div>
         <Accordion />
       </div>
+
       
-      {/* <div className="w-full h-full text-slate-50">
         <Card
           frontcontent={
-            <div className="flex flex-col items-center">
+            <div className="relative flex flex-col items-center">
               <Image
-                src="/bnb logo.png"
+                src="/squidcardbg.png"
                 alt="BitnBuild"
-                width={700}
-                height={600}
+                width={200}
+                height={200}
               />
               <h1 className="text-3xl font-squid">BitnBuild</h1>
               <p className="text-lg">Organised by GDSC-CRCE</p>
@@ -62,6 +60,12 @@ export default function Home() {
           }
           backcontent={
             <div className="flex flex-col items-center">
+              <Image
+                src="/cardbg.png"
+                alt="BitnBuild"
+                width={200}
+                height={200}
+              />
               <h1 className="text-3xl font-bold">About Us</h1>
               <p className="text-lg">
                 We are a community of developers who love to code and build
@@ -70,8 +74,7 @@ export default function Home() {
             </div>
           }
         />
-      </div> */}
-     
+
     </main>
   );
 }
