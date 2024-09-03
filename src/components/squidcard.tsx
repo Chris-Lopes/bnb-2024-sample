@@ -11,7 +11,7 @@ const Card: React.FC<CardProps> = ({ frontcontent, backcontent }) => {
     }
 
   return (
-    <div className="flex items-center justify-center m-auto h-screen ">
+    <div className="flex items-center justify-center m-auto w-full h-fit">
       <div
         className={`relative w-full h-full card cursor-pointer ${
           isFlipped ? "card-front-flip" : "card-back-flip"

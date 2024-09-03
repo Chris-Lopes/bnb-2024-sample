@@ -13,6 +13,7 @@ import Sponsers from "@/components/Sponsers";
 import Prizes from "@/components/Prizes";
 import Card from "@/components/squidcard";
 import Domains from "@/components/Domains";
+import Faq from "@/components/Faq";
 //style={{ backgroundImage: 'url("/actualBg.png")', }}
 export default function Home() {
   return (
@@ -45,35 +46,7 @@ export default function Home() {
       </div>
 
       
-        <Card
-          frontcontent={
-            <div className="relative flex flex-col items-center">
-              <Image
-                src="/squidcardbg.png"
-                alt="BitnBuild"
-                width={200}
-                height={200}
-              />
-              <h1 className="text-3xl font-squid">BitnBuild</h1>
-              <p className="text-lg">Organised by GDSC-CRCE</p>
-            </div>
-          }
-          backcontent={
-            <div className="flex flex-col items-center">
-              <Image
-                src="/cardbg.png"
-                alt="BitnBuild"
-                width={200}
-                height={200}
-              />
-              <h1 className="text-3xl font-bold">About Us</h1>
-              <p className="text-lg">
-                We are a community of developers who love to code and build
-                projects.
-              </p>
-            </div>
-          }
-        />
+       <Faq/>
 
     </main>
   );
