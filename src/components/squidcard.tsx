@@ -1,32 +1,31 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 interface CardProps {
   frontcontent: React.ReactNode;
   backcontent: React.ReactNode;
 }
 
 const Card: React.FC<CardProps> = ({ frontcontent, backcontent }) => {
-    const [isFlipped, setIsFlipped] = useState(false);
-    const handleFFlip = () => {
-        setIsFlipped(!isFlipped);
-    }
+  const [isFlipped, setIsFlipped] = useState(false);
+  const handleFFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
 
   return (
-    <div className="flex items-center justify-center m-auto w-full h-fit">
+    <>
       <div
-        className={`relative w-full h-full card cursor-pointer ${
+        className={`relative md:w-[21vw] md:h-[24vh] w-[75vw] h-[19vh] card cursor-pointer ${
           isFlipped ? "card-front-flip" : "card-back-flip"
-        }`} 
-        onClick={handleFFlip}>
+        }`}
+        onClick={handleFFlip}
+      >
         {
-          <div className="absolute card-front inset-0 text-black flex items-center justify-center rounded-lg ">
-            <div className="flex text-5xl">
-              <div>{frontcontent}</div>
-            </div>
+          <div className="absolute card-front w-fit h-fit inset-0 text-black flex items-center justify-center rounded-lg ">
+            <div className="flex text-5xl">{frontcontent}</div>
           </div>
         }
         {
-          <div className="absolute card-back  inset-0 text-black flex items-center justify-center rounded-lg ">
-            <div>{backcontent}</div>
+          <div className="absolute card-back w-fit h-fit inset-0 text-black flex items-center justify-center rounded-lg ">
+            {backcontent}
           </div>
         }
       </div>
@@ -54,10 +53,9 @@ const Card: React.FC<CardProps> = ({ frontcontent, backcontent }) => {
           backface-visibility: hidden;
           transform: rotateX(180deg);
           transition: 0.5s;
-          
         }
       `}</style>
-    </div>
+    </>
   );
 };
 

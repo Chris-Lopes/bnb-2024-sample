@@ -41,13 +41,8 @@ export default function Home() {
       </div>
       <Prizes />
       <Sponsers />
-      <div>
-        <Accordion />
-      </div>
 
-      
-       <Faq/>
-
+      <Faq />
     </main>
   );
 }
