@@ -1,5 +1,16 @@
 import React from "react";
-
+const prevsponsers = [
+  { name: "368", image: "/sponsors/368.png" },
+  { name: "Edusphere", image: "/sponsors/edusphere.png" },
+  { name: "GeeksforGeeks", image: "/sponsors/gfg.jpeg" },
+  { name: "JDoodle", image: "/sponsors/jdoodle.png" },
+  { name: "Give My Certificate", image: "/sponsors/gmc.png" },
+  { name: "noescape", image: "/sponsors/noescape.jpg" },
+  { name: "Postman", image: "/sponsors/postman.png" },
+  { name: "Simply Gaming", image: "/sponsors/simplygaming.png" },
+  { name: "Startup News", image: "/sponsors/startupnews.jpeg" },
+  { name: "Unstop", image: "/sponsors/unstop.png" },
+];
 const Sponsers = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full ">
@@ -60,9 +71,28 @@ const Sponsers = () => {
           <p className="text-2xl"> Yet To Come</p>
         </div>
       </div>
-      <h1 className="md:text-8xl text-3xl mb-20 font-squid">Previous Sponsers</h1>
-      <div>
-        companies...
+      {/* <h1 className="md:text-8xl text-3xl mb-20 font-squid">
+        Previous Sponsers
+      </h1> */}
+      <div className="bg-transparent py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl font-squid text-gray-200 text-center mb-8">
+            Our Previous Sponsors
+          </h2>
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+            {prevsponsers.map((sponsor) => (
+              <div
+                key={sponsor.name}
+                className="col-span-1 flex justify-center items-center bg-transparent p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <img
+                  className="max-h-16 max-w-full object-contain"
+                  src={sponsor.image}
+                  alt={sponsor.name}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
