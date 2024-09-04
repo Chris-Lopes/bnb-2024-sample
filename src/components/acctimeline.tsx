@@ -5,6 +5,8 @@ import {
   motion,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import FadeInSection from "./FadeInSection";
+import PopFadeInSection from "./PopFadeInSection";
 
 interface TimelineEntry {
   title: string;
@@ -21,7 +23,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     backgroundPosition: "center",
     filter: "brightness(0.15)",
   };
-
 
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -44,13 +45,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div className="w-full relative font-squid md:px-10" ref={containerRef}>
-       <div
+      <div
         className="absolute inset-0 -z-10 bg-contain min-h-screen bg-center"
         style={backgroundStyle}
       ></div>
-      <h1 className="md:text-8xl w-full text-center text-3xl pt-10 font-squid">
+      <PopFadeInSection>
+      <h1 className="md:text-8xl w-full text-center text-3xl mt-32 font-squid">
         Timeline
       </h1>
+      </PopFadeInSection>
       <div ref={ref} className="relative container mx-auto pb-20">
         {data.map((item, index) => (
           <div
@@ -58,19 +61,25 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className="flex justify-between pt-10 md:pt-40 md:gap-10"
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="h-10 absolute left-4 md:left-4 w-10 rounded-full bg-black border border-white  flex items-center justify-center">
-                <div className="h-4 w-4 rounded-full bg-thered border border-[hsl(341,71%,56%)] p-2" />
-              </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-white ">
-                {item.title}
-              </h3>
+              <FadeInSection>
+                <div className="h-10 absolute left-4 md:left-4 w-10 rounded-full bg-black border border-white  flex items-center justify-center">
+                  <div className="h-4 w-4 rounded-full bg-thered border border-[hsl(341,71%,56%)] p-2" />
+                </div>
+              </FadeInSection>
+              <FadeInSection>
+                <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-white ">
+                  {item.title}
+                </h3>
+              </FadeInSection>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-fit">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500">
-                {item.title}
-              </h3>
-              {item.content}{" "}
+            <div className="relative pl-20 pr-4 md:pl-4 md:text-5xl w-full md:w-fit">
+              <FadeInSection>
+                <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500">
+                  {item.title}
+                </h3>
+                {item.content}
+              </FadeInSection>
             </div>
           </div>
         ))}

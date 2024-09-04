@@ -3,7 +3,7 @@ import { FaTwitter, FaFacebookF, FaInstagram, FaGithub } from "react-icons/fa";
 
 export const Footer = (): JSX.Element => {
   return (
-    <div className="relative w-full  text-gray-400 py-10">
+    <div id="contact" className="relative w-full  text-gray-400 py-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between mt-10">
           <div className="mb-6 md:mb-0">

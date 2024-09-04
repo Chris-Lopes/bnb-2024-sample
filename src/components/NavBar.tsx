@@ -54,38 +54,38 @@ export const NavBar = (): JSX.Element => {
             Home
           </a>
           <a
-            href="#"
+            href="#domains"
             className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
           >
             Domains
           </a>
           <a
-            href="#"
+            href="#timeline"
             className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
           >
             Timeline
           </a>
           <a
-            href="#"
+            href="#prizes"
             className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
           >
             Prizes
           </a>
 
           <a
-            href="#"
+            href="#sponsors"
             className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
           >
             Sponsors
           </a>
           <a
-            href="#"
+            href="#faq"
             className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
           >
             FAQ
           </a>
           <a
-            href="#"
+            href="#contact"
             className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
           >
             Contact Us
@@ -118,37 +118,37 @@ export const NavBar = (): JSX.Element => {
             Home
           </a>
           <a
-            href="#"
+            href="#domains"
             className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
           >
             Domains
           </a>
           <a
-            href="#"
+            href="#timeline"
             className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
           >
             Timeline
           </a>
           <a
-            href="#"
+            href="#prizes"
             className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
           >
             Prizes
           </a>
           <a
-            href="#"
+            href="#sponsors"
             className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
           >
             Sponsors
           </a>
           <a
-            href="#"
+            href="#faq"
             className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
           >
             FAQ
           </a>
           <a
-            href="#"
+            href="#contact"
             className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
           >
             Contact Us

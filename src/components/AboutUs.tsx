@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import FadeInSection from "./FadeInSection";
 
 interface AboutUsProps {
   imageUrl: string;
@@ -20,11 +21,12 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageUrl, title, description }) => {
   
 
   return (
-    <section className="  flex justify-center items-center relative text-center">
+    <section id="about" className="  flex justify-center items-center relative text-center">
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center"
         style={backgroundStyle}
-      ></div>
+        ></div>
+        <FadeInSection>
       <div className="flex min-h-screen flex-col md:flex-row container mx-auto items-center gap-10 justify-center">
         <div className="md:w-1/2 mb-8 md:mb-0">
           <Image
@@ -42,6 +44,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageUrl, title, description }) => {
         ))}
         </div>
       </div>
+    </FadeInSection>
     </section>
   );
 };

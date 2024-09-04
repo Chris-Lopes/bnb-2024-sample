@@ -111,11 +111,11 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4">
-        <div className="flex justify-center items-center space-x-4">
+        <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4">
           <span className="text-white text-lg md:text-4xl font-squid">
             Event Starts In:
           </span>
-          <div className="flex space-x-2">
+          <div className="flex space-x-2 justify-center items-center">
             {isClient ? timerComponents : null}
           </div>
         </div>

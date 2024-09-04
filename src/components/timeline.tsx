@@ -6,47 +6,47 @@ export function TimelineDemo() {
   const data = [
     {
       title: "Registrations Open",
-      content: <p className=""> some dates od the registrations </p>,
+      content: <p className=""> Live </p>,
     },
     {
       title: "Registrations Closed",
-      content: <p className="">some dates od the registrations</p>,
+      content: <p className="">5 October</p>,
     },
     {
       title: "Internal State Rounds Begin",
-      content: <p className="">some dates od the registrations</p>,
+      content: <p className="">12 October</p>,
     },
     {
       title: "Internal State Rounds End",
-      content: <p className="">some dates od the registrations</p>,
+      content: <p className="">13 October</p>,
     },
     {
       title: "Final Round Inauguration Ceremony Begins",
-      content: <p className="">some dates od the registrations</p>,
+      content: <p className="">26th October 2 pm</p>,
     },
     {
       title: "Hacking Begins",
-      content: <p className="">some dates od the registrations</p>,
-    },
-    {
-      title: "Dinner Break",
-      content: <p className="">some dates od the registrations</p>,
+      content: <p className="">26th October 2:30 pm</p>,
     },
     {
       title: "Mentoring Session",
-      content: <p className="">some dates od the registrations</p>,
+      content: <p className="">26th October 7 pm</p>,
+    },
+    {
+      title: "Dinner Break",
+      content: <p className="">26th October 9 pm</p>,
     },
     {
       title: "Hacking Ends",
-      content: <p className="">some dates od the registrations</p>,
+      content: <p className="">27th October 11 am</p>,
     },
     {
       title: "Final Round Cosing Ceremony Begins",
-      content: <p className="">some dates od the registrations</p>,
+      content: <p className="">27th October 4 pm</p>,
     },
   ];
   return (
-    <div className="w-full">
+    <div id="timeline" className="w-full">
       <Timeline data={data} />
     </div>
   );
