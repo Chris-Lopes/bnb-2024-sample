@@ -2,6 +2,7 @@ import React from "react";
 import PopFadeInSection from "./PopFadeInSection";
 import FadeInSection from "./FadeInSection";
 const prevsponsers = [
+  { name: "RedBull", image: "/sponsors/RB.jpg" },
   { name: "368", image: "/sponsors/368.png" },
   { name: "Edusphere", image: "/sponsors/edussphere.png" },
   { name: "GeeksforGeeks", image: "/sponsors/gfg.jpeg" },
