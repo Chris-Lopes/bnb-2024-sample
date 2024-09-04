@@ -36,7 +36,7 @@ export const NavBar = (): JSX.Element => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <img className="w-24 h-auto" alt="Logo" src="logo.svg" />
+          <img className="w-24 h-auto" alt="Logo" src="Logo.svg" />
         </div>
         <div className="md:hidden flex items-center">
           <button
