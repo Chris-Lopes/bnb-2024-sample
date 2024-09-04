@@ -22,12 +22,12 @@ const Prizes = () => {
       ></div>
       <div className="relative min-h-screen py-20 mb-10">
         <PopFadeInSection>
-          <h1 className="md:text-8xl text-3xl mb-10 text-center font-squid ">
+          <h1 className="md:text-8xl text-5xl mb-10 text-center font-squid ">
             Prizes!
           </h1>
         </PopFadeInSection>
         <FadeInSection>
-          <div className="flex md:flex-row flex-col w-full justify-between container md:gap-0 gap-10 mx-auto text-center items-center">
+          <div className="flex md:flex-row flex-col md:w-full w-[65%] justify-between container md:gap-0 gap-10 mx-auto text-center items-center">
             <div className="">
               <Image
                 src="/prize2.png"

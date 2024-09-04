@@ -28,7 +28,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageUrl, title, description }) => {
         ></div>
         <FadeInSection>
       <div className="flex min-h-screen flex-col md:flex-row container mx-auto items-center gap-10 justify-center">
-        <div className="md:w-1/2 mb-8 md:mb-0">
+        <div className="md:w-1/2 w-[90%] mb-8 md:mb-0">
           <Image
             src={imageUrl}
             height={10000}
@@ -37,7 +37,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageUrl, title, description }) => {
             className="w-full h-auto rounded-lg "
           />
         </div>
-        <div className="md:w-1/2 md:pl-8">
+        <div className="md:w-1/2 md:pl-8 w-[90%]">
           <h2 className="text-5xl font-squid flex justify-center font-bold mb-4">{title}</h2>
         {description.map((description,id) => (
           <p key={id} className="text-gray-100 font-sharp text-2xl pb-3">{description}</p>

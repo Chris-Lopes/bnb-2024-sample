@@ -36,7 +36,7 @@ export const NavBar = (): JSX.Element => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <img className="w-24 h-auto" alt="Logo" src="Logo.svg" />
+          <img className="w-24 h-auto" alt="Logo" src="/logo.png" />
         </div>
         <div className="md:hidden flex items-center">
           <button
@@ -49,24 +49,28 @@ export const NavBar = (): JSX.Element => {
         <div className="hidden md:flex space-x-6">
           <a
             href="#"
+            onClick={toggleMobileMenu}
             className="font-bold hover:text-gray-300 transition-colors duration-200"
           >
             Home
           </a>
           <a
             href="#domains"
+            onClick={toggleMobileMenu}
             className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
           >
             Domains
           </a>
           <a
             href="#timeline"
+            onClick={toggleMobileMenu}
             className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
           >
             Timeline
           </a>
           <a
             href="#prizes"
+            onClick={toggleMobileMenu}
             className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
           >
             Prizes
@@ -74,18 +78,21 @@ export const NavBar = (): JSX.Element => {
 
           <a
             href="#sponsors"
+            onClick={toggleMobileMenu}
             className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
           >
             Sponsors
           </a>
           <a
             href="#faq"
+            onClick={toggleMobileMenu}
             className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
           >
             FAQ
           </a>
           <a
             href="#contact"
+            onClick={toggleMobileMenu}
             className="font-medium text-gray-400 hover:text-gray-300 transition-colors duration-200"
           >
             Contact Us

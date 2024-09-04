@@ -80,7 +80,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center justify-center mt-[30vh] space-y-6">
           {showText && (
             <Image
-              src="/bnb_logo.png"
+              src="/bnb_logo_new.png"
               alt="bnb logo"
               width={500}
               height={1000}

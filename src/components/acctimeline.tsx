@@ -44,13 +44,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="w-full relative font-squid md:px-10" ref={containerRef}>
+    <div className="w-full relative  md:px-10" ref={containerRef}>
       <div
         className="absolute inset-0 -z-10 bg-contain min-h-screen bg-center"
         style={backgroundStyle}
       ></div>
       <PopFadeInSection>
-      <h1 className="md:text-8xl w-full text-center text-3xl mt-32 font-squid">
+      <h1 className="md:text-8xl w-full text-center text-5xl mt-32 font-squid">
         Timeline
       </h1>
       </PopFadeInSection>
@@ -67,15 +67,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 </div>
               </FadeInSection>
               <FadeInSection>
-                <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-white ">
+                <h3 className="hidden font-squid md:block text-xl md:pl-20 md:text-5xl font-bold text-white ">
                   {item.title}
                 </h3>
               </FadeInSection>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 md:text-5xl w-full md:w-fit">
+            <div className="relative pl-20 pr-4 font-squid text-xl md:pl-4 md:text-5xl w-full md:w-fit">
               <FadeInSection>
-                <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500">
+                <h3 className="md:hidden font-squid block text-2xl mb-4 text-left font-bold text-neutral-500">
                   {item.title}
                 </h3>
                 {item.content}
