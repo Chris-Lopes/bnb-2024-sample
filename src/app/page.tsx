@@ -18,12 +18,8 @@ import Faq from "@/components/Faq";
 export default function Home() {
   return (
     <main>
-      <div className="h-screen flex-row-reverse align-bottom items-end">
-        <div className="z-10">
-          {/* <Hero/> */}
-          <HeroSection />
-        </div>
-      </div>
+      <HeroSection />
+
       <div>
         <AboutUs
           imageUrl="/Map_wrap.png"

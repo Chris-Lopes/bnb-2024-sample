@@ -68,51 +68,53 @@ const HeroSection = () => {
   ));
 
   return (
-    <div className="h-screen w-full flex flex-col relative">
-      <div
-        className="h-full w-full flex flex-col justify-center items-center"
-        style={{
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundImage: ` linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1)),  url('/actualBg.png')`,
-        }}
-      >
-        <div className="flex flex-col items-center justify-center mt-[30vh] space-y-6">
-          {showText && (
-            <Image
-              src="/bnb_logo_new.png"
-              alt="bnb logo"
-              width={500}
-              height={1000}
-              quality={100}
-              priority
-              className="ease-in-out duration-300"
+    <>
+      <div className="h-screen w-full flex flex-col relative">
+        <div
+          className="h-full w-full flex flex-col justify-center items-center"
+          style={{
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundImage: ` linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1)),  url('/actualBg.png')`,
+          }}
+        >
+          <div className="flex flex-col items-center justify-center mt-[30vh] space-y-6">
+            {showText && (
+              <Image
+                src="/bnb_logo_new.png"
+                alt="bnb logo"
+                width={500}
+                height={1000}
+                quality={100}
+                priority
+                className="ease-in-out duration-300"
+              />
+            )}
+            <ReactTyped
+              strings={["WELCOME!", "ARE YOU READY?", "PICK YOUR POISON"]}
+              typeSpeed={50}
+              backSpeed={30}
+              showCursor={false}
+              backDelay={500}
+              loop={false}
+              className="text-3xl sm:text-4xl md:text-5xl font-squid font-bold text-white text-center"
             />
-          )}
-          <ReactTyped
-            strings={["WELCOME!", "ARE YOU READY?", "PICK YOUR POISON"]}
-            typeSpeed={50}
-            backSpeed={30}
-            showCursor={false}
-            backDelay={500}
-            loop={false}
-            className="text-3xl sm:text-4xl md:text-5xl font-squid font-bold text-white text-center"
-          />
-          {showText && (
-            <div className="flex gap-4 justify-center mt-6">
-              <button className="text-white bg-thered font-bold text-lg md:text-xl py-3 px-6 hover:scale-105 hover:bg-opacity-90 ease-in-out duration-300 font-squid rounded-full">
-                Know More
-              </button>
-              <button className="text-white bg-thered font-bold text-lg md:text-xl py-3 px-6 hover:scale-105 hover:bg-opacity-90 ease-in-out duration-300 font-squid rounded-full">
-                Register
-              </button>
-            </div>
-          )}
+            {showText && (
+              <div className="flex gap-4 justify-center mt-6">
+                <button className="text-white bg-thered font-bold text-lg md:text-xl py-3 px-6 hover:scale-105 hover:bg-opacity-90 ease-in-out duration-300 font-squid rounded-full">
+                  Know More
+                </button>
+                <button className="text-white bg-thered font-bold text-lg md:text-xl py-3 px-6 hover:scale-105 hover:bg-opacity-90 ease-in-out duration-300 font-squid rounded-full">
+                  Register
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4">
+      <div className=" bottom-0 left-0 right-0  p-4">
         <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4">
-          <span className="text-white text-lg md:text-4xl font-squid">
+          <span className="text-white text-2xl pb-3 md:pb-0 md:text-4xl font-squid">
             Event Starts In:
           </span>
           <div className="flex space-x-2 justify-center items-center">
@@ -120,7 +122,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
