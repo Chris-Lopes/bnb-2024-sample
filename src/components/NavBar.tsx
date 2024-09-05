@@ -143,6 +143,10 @@ export const NavBar = (): JSX.Element => {
             Register
           </button>
         </div>
+
+        <button className=" md:hidden bg-slate-200 text-black cursor-pointer font-medium px-4 py-2 rounded-xl hover:bg-slate-300 transition-colors duration-200">
+            Register
+          </button>
       </div>
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
@@ -219,9 +223,7 @@ export const NavBar = (): JSX.Element => {
           <LanguageDropdown />
         </div>
       )}
-       <button className=" md:hidden bg-slate-200 text-black cursor-pointer font-medium px-4 py-2 rounded-xl hover:bg-slate-300 transition-colors duration-200">
-            Register
-          </button>
+       
     </div>
   );
 };
