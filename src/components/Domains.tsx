@@ -23,7 +23,7 @@ const Domains = () => {
 
       <div className="relative flex flex-col justify-center items-center">
         <PopFadeInSection>
-          <h1 className="md:text-8xl text-white text-6xl md:pb-0 pb-10 md:translate-y-20 text-center font-squid ">
+          <h1 className="md:text-8xl text-white text-6xl md:pb-4 pb-10 md:translate-y-20 text-center font-squid ">
             Domains
           </h1>
         </PopFadeInSection>
