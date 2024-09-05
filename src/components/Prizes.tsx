@@ -20,7 +20,7 @@ const Prizes = () => {
         className="absolute inset-0  bg-cover bg-center"
         style={backgroundStyle}
       ></div>
-      <div className="relative min-h-screen py-20 mb-10">
+      <div className="relative min-h-screen py-20 pb-10">
         <PopFadeInSection>
           <h1 className="md:text-8xl text-5xl mb-10 text-center font-squid ">
             Prizes!

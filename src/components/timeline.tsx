@@ -5,13 +5,13 @@ import { Timeline } from "./acctimeline";
 export function TimelineDemo() {
   const data = [
     {
-      title: "Registrations Open",
-      content: <p className=""> Live </p>,
+      title: "Registrations",
+      content: <p className=""> Live - 5 October </p>,
     },
-    {
-      title: "Registrations Closed",
-      content: <p className="">5 October</p>,
-    },
+    // {
+    //   title: "Registrations Closed",
+    //   content: <p className="">5 October</p>,
+    // },
     {
       title: "Internal State Rounds Begin",
       content: <p className="">12 October</p>,

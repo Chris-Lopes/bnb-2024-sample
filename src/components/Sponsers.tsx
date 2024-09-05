@@ -16,7 +16,7 @@ const prevsponsers = [
 ];
 const Sponsers = () => {
   return (
-    <div id="sponsors" className="flex flex-col justify-center items-center w-full ">
+    <div id="sponsors" className="flex bg-black flex-col justify-center items-center w-full ">
       <PopFadeInSection>
       <h1 className="md:text-8xl text-4xl mb-20 font-squid">Our Sponsors</h1>
       </PopFadeInSection>

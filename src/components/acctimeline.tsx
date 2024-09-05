@@ -50,7 +50,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         style={backgroundStyle}
       ></div>
       <PopFadeInSection>
-      <h1 className="md:text-8xl w-full text-center text-5xl mt-32 font-squid">
+      <h1 className="md:text-8xl w-full text-center text-5xl pt-32 font-squid">
         Timeline
       </h1>
       </PopFadeInSection>
