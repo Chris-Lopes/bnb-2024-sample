@@ -22,7 +22,7 @@ export const Footer = (): JSX.Element => {
           </div>
           <div>
             <h3 className="text-white font-semibold mb-2">Resources</h3>
-            <p>Problem Statement</p>
+            <p>Problem Statements</p>
             <p>Regional Representatives</p>
             <p>Contact Regional Rep</p>
             <p>Feedback</p>

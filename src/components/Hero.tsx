@@ -112,7 +112,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className=" bottom-0 left-0 right-0  p-4">
+      <div className=" bottom-0 left-0 right-0">
         <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4">
           <span className="text-white text-2xl pb-3 md:pb-0 md:text-4xl font-squid">
             Event Starts In:
