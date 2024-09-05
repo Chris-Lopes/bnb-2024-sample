@@ -115,6 +115,9 @@ export const NavBar = (): JSX.Element => {
           transition={{ duration: 0.3 }}
           className="md:hidden fixed top-0 left-0 w-full h-screen bg-black bg-opacity-90 flex flex-col items-center justify-start pt-16 space-y-6 z-40"
         >
+           <button className="bg-slate-200 text-black cursor-pointer font-medium px-6 py-3 rounded-xl hover:bg-slate-300 transition-colors duration-200">
+              Register
+            </button>
           <button
             onClick={toggleMobileMenu}
             className="absolute top-4 right-4 text-white focus:outline-none"
@@ -122,51 +125,56 @@ export const NavBar = (): JSX.Element => {
             <FaTimes size={24} />
           </button>
           <a
+            onClick={toggleMobileMenu}
             href="#"
             className="font-bold text-white text-xl hover:text-gray-300 transition-colors duration-200"
           >
             Home
           </a>
           <a
+            onClick={toggleMobileMenu}
             href="#domains"
             className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
           >
             Domains
           </a>
           <a
+            onClick={toggleMobileMenu}
             href="#timeline"
             className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
           >
             Timeline
           </a>
           <a
+            onClick={toggleMobileMenu}
             href="#prizes"
             className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
           >
             Prizes
           </a>
           <a
+            onClick={toggleMobileMenu}
             href="#sponsors"
             className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
           >
             Sponsors
           </a>
           <a
+            onClick={toggleMobileMenu}
             href="#faq"
             className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
           >
             FAQ
           </a>
           <a
+            onClick={toggleMobileMenu}
             href="#contact"
             className="font-medium text-gray-400 text-lg hover:text-gray-300 transition-colors duration-200"
           >
             Contact Us
           </a>
           <div className="flex flex-col items-center space-y-4">
-            <button className="bg-slate-200 text-black cursor-pointer font-medium px-6 py-3 rounded-xl hover:bg-slate-300 transition-colors duration-200">
-              Register
-            </button>
+           
             <LanguageDropdown />
           </div>
         </motion.div>
