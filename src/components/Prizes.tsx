@@ -22,25 +22,13 @@ const Prizes = () => {
       ></div>
       <div className="relative min-h-screen py-20 pb-10">
         <PopFadeInSection>
-          <h1 className="md:text-8xl text-5xl mb-10 text-center font-squid ">
+          <h1 className="md:text-8xl text-white text-5xl mb-10 text-center font-squid ">
             Prizes!
           </h1>
         </PopFadeInSection>
         <FadeInSection>
           <div className="flex md:flex-row flex-col md:w-full w-[65%] justify-between container md:gap-0 gap-10 mx-auto text-center items-center">
-            <div className="">
-              <Image
-                src="/prize2.png"
-                alt="prize2"
-                height={10000}
-                width={10000}
-                className="w-full md:mt-60 rounded-full shadow-lg hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-thered shadow-thered mb-6"
-              />
-              <h2 className="text-4xl font-squid">
-                2nd Prize <br /> 25,000₹
-              </h2>
-            </div>
-            <div className="">
+          <div className=" md:hidden">
               <Image
                 src="/prize1.png"
                 alt="prize1"
@@ -48,8 +36,45 @@ const Prizes = () => {
                 width={10000}
                 className="w-full rounded-full shadow-lg shadow-thered mb-6 hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-thered"
               />
-              <h2 className="text-4xl font-squid">
+              <h2 className="text-4xl text-white font-squid">
                 1st Prize <br /> 50,000₹
+              </h2>
+            </div>
+            
+            <div className="md:block hidden">
+              <Image
+                src="/prize2.png"
+                alt="prize2"
+                height={10000}
+                width={10000}
+                className="w-full md:mt-60 rounded-full shadow-lg hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-thered shadow-thered mb-6"
+              />
+              <h2 className="text-4xl text-white font-squid">
+                2nd Prize <br /> 25,000₹
+              </h2>
+            </div>
+            <div className="md:block hidden">
+              <Image
+                src="/prize1.png"
+                alt="prize1"
+                height={10000}
+                width={10000}
+                className="w-full rounded-full shadow-lg shadow-thered mb-6 hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-thered"
+              />
+              <h2 className="text-4xl text-white font-squid">
+                1st Prize <br /> 50,000₹
+              </h2>
+            </div>
+            <div className="md:hidden">
+              <Image
+                src="/prize2.png"
+                alt="prize2"
+                height={10000}
+                width={10000}
+                className="w-full md:mt-60 rounded-full shadow-lg hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-thered shadow-thered mb-6"
+              />
+              <h2 className="text-4xl text-white font-squid">
+                2nd Prize <br /> 25,000₹
               </h2>
             </div>
             <div className="">
@@ -60,7 +85,7 @@ const Prizes = () => {
                 width={10000}
                 className="w-full md:mt-60 rounded-full shadow-lg shadow-thered mb-6 hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-thered"
               />
-              <h2 className="text-4xl font-squid">
+              <h2 className="text-4xl text-white font-squid">
                 3rd Prize <br /> 10,000₹
               </h2>
             </div>

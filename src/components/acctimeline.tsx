@@ -50,7 +50,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         style={backgroundStyle}
       ></div>
       <PopFadeInSection>
-      <h1 className="md:text-8xl w-full text-center text-5xl pt-32 font-squid">
+      <h1 className="md:text-8xl text-white w-full text-center text-5xl pt-32 font-squid">
         Timeline
       </h1>
       </PopFadeInSection>
@@ -73,7 +73,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </FadeInSection>
             </div>
 
-            <div className="relative pl-20 pr-4 font-squid text-xl md:pl-4 md:text-5xl w-full md:w-fit">
+            <div className="relative pl-20 pr-4 font-squid text-xl text-white md:pl-4 md:text-5xl w-full md:w-fit">
               <FadeInSection>
                 <h3 className="md:hidden font-squid block text-2xl mb-4 text-left font-bold text-neutral-500">
                   {item.title}
