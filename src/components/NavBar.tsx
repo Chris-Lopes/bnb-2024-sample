@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { LanguageDropdown } from "./LanguageDropdown";
+import { motion } from "framer-motion";
 
 export const NavBar = (): JSX.Element => {
   const [showNav, setShowNav] = useState(true);
@@ -107,10 +108,12 @@ export const NavBar = (): JSX.Element => {
       </div>
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div
-          className={`md:hidden fixed top-0 left-0 w-full h-screen bg-black bg-opacity-90 flex flex-col items-center justify-start pt-16 space-y-6 z-40 ease-in-out transform transition-transform duration-300 ${
-            isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-          }`}
+        <motion.div
+          initial={{ y: "-100%", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: "-100%", opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="md:hidden fixed top-0 left-0 w-full h-screen bg-black bg-opacity-90 flex flex-col items-center justify-start pt-16 space-y-6 z-40"
         >
           <button
             onClick={toggleMobileMenu}
@@ -166,7 +169,7 @@ export const NavBar = (): JSX.Element => {
             </button>
             <LanguageDropdown />
           </div>
-        </div>
+        </motion.div>
       )}
     </div>
   );
