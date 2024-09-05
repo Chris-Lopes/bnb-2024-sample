@@ -63,7 +63,10 @@ export const NavBar = (): JSX.Element => {
         <div className="flex items-center">
           <img className="w-24 h-auto" alt="Logo" src="/logo.png" />
         </div>
-        <div className="md:hidden flex items-center">
+        <div className="md:hidden flex gap-4 items-center">
+        <button className="bg-slate-200 text-black cursor-pointer font-medium px-4 py-2 rounded-xl hover:bg-slate-300 transition-colors duration-200">
+            Register
+          </button>
           <button
             onClick={toggleMobileMenu}
             className="text-white focus:outline-none"
@@ -135,18 +138,15 @@ export const NavBar = (): JSX.Element => {
           >
             Contact Us
           </a>
+          
         </div>
-       
+        
         <div className="hidden md:flex items-center space-x-4">
           <LanguageDropdown />
           <button className="bg-slate-200 text-black cursor-pointer font-medium px-4 py-2 rounded-xl hover:bg-slate-300 transition-colors duration-200">
             Register
           </button>
         </div>
-
-        <button className=" md:hidden bg-slate-200 text-black cursor-pointer font-medium px-4 py-2 rounded-xl hover:bg-slate-300 transition-colors duration-200">
-            Register
-          </button>
       </div>
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
@@ -223,7 +223,6 @@ export const NavBar = (): JSX.Element => {
           <LanguageDropdown />
         </div>
       )}
-       
     </div>
   );
 };

@@ -50,7 +50,7 @@ const Prizes = () => {
                 className="w-full md:mt-60 rounded-full shadow-lg hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-thered shadow-thered mb-6"
               />
               <h2 className="text-4xl text-white font-squid">
-                2nd Prize <br /> 25,000₹
+                2nd Prize <br /> 35,000₹
               </h2>
             </div>
             <div className="md:block hidden">
