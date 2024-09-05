@@ -60,7 +60,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             key={index}
             className="flex justify-between pt-10 md:pt-40 md:gap-10"
           >
-            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+            <div className=" flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <FadeInSection>
                 <div className="h-10 absolute left-4 md:left-4 w-10 rounded-full bg-black border border-white  flex items-center justify-center">
                   <div className="h-4 w-4 rounded-full bg-thered border border-[hsl(341,71%,56%)] p-2" />
