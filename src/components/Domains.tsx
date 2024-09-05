@@ -39,7 +39,7 @@ const Domains = () => {
                 />
               </div>
 
-              <h2 className="text-3xl  pt-8 font-squid">WEB Developement</h2>
+              <h2 className="text-3xl text-white pt-8 font-squid">WEB Developement</h2>
             </div>
           </FadeInSection>
           <div className="md:w-96 w-72 text-center">
