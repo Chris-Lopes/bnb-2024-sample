@@ -17,6 +17,18 @@ export const NavBar = (): JSX.Element => {
       setShowNav(true); // Scrolling up
     }
     setLastScrollY(window.scrollY);
+
+    // Determine active section on scroll
+    const sections = ["home", "domains", "timeline", "prizes", "sponsors", "faq", "contact"];
+    const offsets = sections.map((id) => document.getElementById(id)?.offsetTop || 0);
+    
+    const scrollPosition = window.scrollY + window.innerHeight / 2; // Middle of the viewport
+
+    sections.forEach((section, index) => {
+      if (scrollPosition >= offsets[index] && (index === sections.length - 1 || scrollPosition < offsets[index + 1])) {
+        setActiveSection(section);
+      }
+    });
   };
 
   const toggleMobileMenu = () => {
@@ -26,6 +38,12 @@ export const NavBar = (): JSX.Element => {
   const handleNavClick = (section: string) => {
     setActiveSection(section);
     setIsMobileMenuOpen(false); // Close mobile menu on navigation click
+
+    // Smooth scroll to the section
+    const sectionElement = document.getElementById(section);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   useEffect(() => {
