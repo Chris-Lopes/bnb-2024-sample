@@ -18,7 +18,7 @@ const Sponsers = () => {
   return (
     <div id="sponsors" className="flex flex-col justify-center items-center w-full ">
       <PopFadeInSection>
-      <h1 className="md:text-8xl text-4xl mb-20 font-squid">Our Sponsors</h1>
+      <h1 className="md:text-8xl text-white w-full text-center text-4xl mb-20 font-squid">Our Sponsors</h1>
       </PopFadeInSection>
       <div>
         <div className="text-center mb-10">
@@ -30,7 +30,7 @@ const Sponsers = () => {
             </span>
           </h2>
           </FadeInSection>
-          <p className="text-2xl"> Yet To Come</p>
+          <p className="text-2xl text-white font-sharp"> Yet To Come</p>
         </div>
         <div className="text-center mb-10">
         <FadeInSection>
@@ -41,7 +41,7 @@ const Sponsers = () => {
             </span>
           </h2>
           </FadeInSection>
-          <p className="text-2xl"> Yet To Come</p>
+          <p className="text-2xl text-white font-sharp"> Yet To Come</p>
         </div>
         <div className="text-center mb-10">
         <FadeInSection>
@@ -52,7 +52,7 @@ const Sponsers = () => {
             </span>
           </h2>
           </FadeInSection>
-          <p className="text-2xl"> Yet To Come</p>
+          <p className="text-2xl text-white font-sharp"> Yet To Come</p>
         </div>
         <div className="text-center mb-10">
         <FadeInSection>
@@ -63,7 +63,7 @@ const Sponsers = () => {
             </span>
           </h2>
           </FadeInSection>
-          <p className="text-2xl"> Yet To Come</p>
+          <p className="text-2xl text-white font-sharp"> Yet To Come</p>
         </div>
         <div className="text-center mb-10">
         <FadeInSection>
@@ -74,7 +74,7 @@ const Sponsers = () => {
             </span>
           </h2>
           </FadeInSection>
-          <p className="text-2xl"> Yet To Come</p>
+          <p className="text-2xl text-white font-sharp"> Yet To Come</p>
         </div>
         <div className="text-center mb-10">
         <FadeInSection>
@@ -85,7 +85,7 @@ const Sponsers = () => {
             </span>
           </h2>
           </FadeInSection>
-          <p className="text-2xl"> Yet To Come</p>
+          <p className="text-2xl text-white font-sharp"> Yet To Come</p>
         </div>
       </div>
       {/* <h1 className="md:text-8xl text-3xl mb-20 font-squid">
