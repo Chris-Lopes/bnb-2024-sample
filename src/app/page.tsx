@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import localFont from "next/font/local";
-import React from "react";
+import React , {useState,useEffect}from "react";
 import HeroSection from "@/components/Hero";
 import Accordion from "@/components/Accordian";
 import { Footer } from "@/components/Footer";
@@ -14,8 +14,23 @@ import Prizes from "@/components/Prizes";
 import Card from "@/components/squidcard";
 import Domains from "@/components/Domains";
 import Faq from "@/components/Faq";
+import Loading from "./loading";
 //style={{ backgroundImage: 'url("/actualBg.png")', }}
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a data fetch
+    setTimeout(() => {
+      setLoading(false);
+    }, 5200); // n-second delay to simulate loading
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
+
+
   return (
     <main>
       <HeroSection />
