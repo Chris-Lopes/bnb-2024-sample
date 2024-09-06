@@ -50,7 +50,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         style={backgroundStyle}
       ></div>
       <PopFadeInSection>
-      <h1 className="md:text-8xl w-full text-center text-5xl mt-32 font-squid">
+      <h1 className="md:text-8xl text-white w-full text-center text-5xl pt-32 font-squid">
         Timeline
       </h1>
       </PopFadeInSection>
@@ -60,7 +60,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             key={index}
             className="flex justify-between pt-10 md:pt-40 md:gap-10"
           >
-            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+            <div className=" flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <FadeInSection>
                 <div className="h-10 absolute left-4 md:left-4 w-10 rounded-full bg-black border border-white  flex items-center justify-center">
                   <div className="h-4 w-4 rounded-full bg-thered border border-[hsl(341,71%,56%)] p-2" />
@@ -73,7 +73,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </FadeInSection>
             </div>
 
-            <div className="relative pl-20 pr-4 font-squid text-xl md:pl-4 md:text-5xl w-full md:w-fit">
+            <div className="relative pl-20 pr-4 font-squid text-xl text-white md:pl-4 md:text-5xl w-full md:w-fit">
               <FadeInSection>
                 <h3 className="md:hidden font-squid block text-2xl mb-4 text-left font-bold text-neutral-500">
                   {item.title}

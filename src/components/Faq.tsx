@@ -22,7 +22,7 @@ const Faq = () => {
         style={backgroundStyle}
       />
       <PopFadeInSection>
-        <h1 className="md:text-8xl text-5xl md:pb-0 pb-4 translate-y-0 md:translate-y-20 text-center font-squid ">
+        <h1 className="md:text-8xl text-white text-5xl md:pb-0 pb-4 translate-y-0 md:translate-y-20 text-center font-squid ">
           FAQ
         </h1>
       </PopFadeInSection>

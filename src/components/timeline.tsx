@@ -5,21 +5,21 @@ import { Timeline } from "./acctimeline";
 export function TimelineDemo() {
   const data = [
     {
-      title: "Registrations Open",
-      content: <p className=""> Live </p>,
+      title: "Registrations",
+      content: <p className=""> Live - 5 October </p>,
     },
+    // {
+    //   title: "Registrations Closed",
+    //   content: <p className="">5 October</p>,
+    // },
     {
-      title: "Registrations Closed",
-      content: <p className="">5 October</p>,
+      title: "Internal State Rounds",
+      content: <p className="">12 October - 13 October</p>,
     },
-    {
-      title: "Internal State Rounds Begin",
-      content: <p className="">12 October</p>,
-    },
-    {
-      title: "Internal State Rounds End",
-      content: <p className="">13 October</p>,
-    },
+    // {
+    //   title: "Internal State Rounds End",
+    //   content: <p className="">13 October</p>,
+    // },
     {
       title: "Final Round Inauguration Ceremony Begins",
       content: <p className="">26th October 2 pm</p>,

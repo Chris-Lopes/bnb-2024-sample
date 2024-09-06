@@ -23,7 +23,7 @@ const Domains = () => {
 
       <div className="relative flex flex-col justify-center items-center">
         <PopFadeInSection>
-          <h1 className="md:text-8xl text-6xl md:pb-0 pb-10 md:translate-y-20 text-center font-squid ">
+          <h1 className="md:text-8xl text-white text-6xl md:pb-4 pb-10 md:translate-y-20 text-center font-squid ">
             Domains
           </h1>
         </PopFadeInSection>
@@ -39,7 +39,7 @@ const Domains = () => {
                 />
               </div>
 
-              <h2 className="text-3xl  pt-8 font-squid">WEB Developement</h2>
+              <h2 className="text-3xl text-white pt-8 font-squid">WEB Developement</h2>
             </div>
           </FadeInSection>
           <div className="md:w-96 w-72 text-center">
@@ -52,7 +52,7 @@ const Domains = () => {
                 alt="blockchain"
               />
             </div>
-            <h2 className="text-3xl pt-8 font-squid">Blockchain</h2>
+            <h2 className="text-3xl text-white pt-8 font-squid">Blockchain</h2>
           </FadeInSection>
           </div>
           <div className="md:w-96 w-72 text-center">
@@ -65,7 +65,7 @@ const Domains = () => {
                 alt="aiml"
               />
             </div>
-            <h2 className="text-3xl pt-8 font-squid">AIML</h2>
+            <h2 className="text-3xl text-white pt-8 font-squid">AIML</h2>
             </FadeInSection>
           </div>
         </div>
