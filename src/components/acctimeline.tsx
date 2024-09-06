@@ -73,9 +73,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </FadeInSection>
             </div>
 
-            <div className="relative pl-20 pr-4 font-squid text-xl text-white md:pl-4 md:text-5xl w-full md:w-fit">
+            <div className="relative pl-20 pr-4 font-squid text-xl text-neutral-100 md:pl-4 md:text-5xl w-full md:w-fit">
               <FadeInSection>
-                <h3 className="md:hidden font-squid block text-2xl mb-4 text-left font-bold text-neutral-500">
+                <h3 className="md:hidden font-squid block text-2xl mb-4 text-left font-bold text-white">
                   {item.title}
                 </h3>
                 {item.content}
