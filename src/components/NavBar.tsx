@@ -1,5 +1,6 @@
-'use client'
+"use client";
 
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { LanguageDropdown } from "./LanguageDropdown";
@@ -19,13 +20,26 @@ export const NavBar = (): JSX.Element => {
     setLastScrollY(window.scrollY);
 
     // Determine active section on scroll
-    const sections = ["home", "domains", "timeline", "prizes", "sponsors", "faq", "contact"];
-    const offsets = sections.map((id) => document.getElementById(id)?.offsetTop || 0);
-    
+    const sections = [
+      "home",
+      "domains",
+      "timeline",
+      "prizes",
+      "sponsors",
+      "faq",
+      "contact",
+    ];
+    const offsets = sections.map(
+      (id) => document.getElementById(id)?.offsetTop || 0,
+    );
+
     const scrollPosition = window.scrollY + window.innerHeight / 2; // Middle of the viewport
 
     sections.forEach((section, index) => {
-      if (scrollPosition >= offsets[index] && (index === sections.length - 1 || scrollPosition < offsets[index + 1])) {
+      if (
+        scrollPosition >= offsets[index] &&
+        (index === sections.length - 1 || scrollPosition < offsets[index + 1])
+      ) {
         setActiveSection(section);
       }
     });
@@ -64,9 +78,12 @@ export const NavBar = (): JSX.Element => {
           <img className="w-24 h-auto" alt="Logo" src="/logo.png" />
         </div>
         <div className="md:hidden flex gap-4 items-center">
-        <button className="bg-slate-200 text-black cursor-pointer font-medium px-4 py-2 rounded-xl hover:bg-slate-300 transition-colors duration-200">
+          <Link
+            href="https://unstop.com/o/ZGc2Wi6?lb=aUcskOfj&utm_medium=Share&utm_source=shortUrl"
+            className="bg-slate-200 text-black cursor-pointer font-medium px-4 py-2 rounded-xl hover:bg-slate-300 transition-colors duration-200"
+          >
             Register
-          </button>
+          </Link>
           <button
             onClick={toggleMobileMenu}
             className="text-white focus:outline-none"
@@ -138,14 +155,15 @@ export const NavBar = (): JSX.Element => {
           >
             Contact Us
           </a>
-          
         </div>
-        
+
         <div className="hidden md:flex items-center space-x-4">
-          <LanguageDropdown />
-          <button className="bg-slate-200 text-black cursor-pointer font-medium px-4 py-2 rounded-xl hover:bg-slate-300 transition-colors duration-200">
+          <Link
+            href="https://unstop.com/o/ZGc2Wi6?lb=aUcskOfj&utm_medium=Share&utm_source=shortUrl"
+            className="bg-slate-200 text-black cursor-pointer font-medium px-4 py-2 rounded-xl hover:bg-slate-300 transition-colors duration-200"
+          >
             Register
-          </button>
+          </Link>
         </div>
       </div>
       {/* Mobile Menu */}

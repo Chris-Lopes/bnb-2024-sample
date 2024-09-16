@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import localFont from "next/font/local";
-import React , {useState,useEffect}from "react";
+import React, { useState, useEffect } from "react";
 import HeroSection from "@/components/Hero";
 import Accordion from "@/components/Accordian";
 import { Footer } from "@/components/Footer";
@@ -15,6 +15,7 @@ import Card from "@/components/squidcard";
 import Domains from "@/components/Domains";
 import Faq from "@/components/Faq";
 import Loading from "./loading";
+import ContactUs from "@/components/contactUs";
 //style={{ backgroundImage: 'url("/actualBg.png")', }}
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -29,7 +30,6 @@ export default function Home() {
   if (loading) {
     return <Loading />;
   }
-
 
   return (
     <main>
@@ -51,6 +51,7 @@ export default function Home() {
         <TimelineDemo />
       </div>
       <Prizes />
+      <ContactUs />
       <Sponsers />
 
       <Faq />

@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useCallback, useMemo } from "react";
 import Image from "next/image";
 import { ReactTyped } from "react-typed";
+import Link from "next/link";
 
 interface TimeLeft {
   days: number;
@@ -104,9 +105,12 @@ const HeroSection = () => {
                 <button className="text-white bg-thered font-bold text-lg md:text-xl py-3 px-6 hover:scale-105 hover:bg-opacity-90 ease-in-out duration-300 font-squid rounded-full">
                   Know More
                 </button>
-                <button className="text-white bg-thered font-bold text-lg md:text-xl py-3 px-6 hover:scale-105 hover:bg-opacity-90 ease-in-out duration-300 font-squid rounded-full">
+                <Link
+                  href="https://unstop.com/o/ZGc2Wi6?lb=aUcskOfj&utm_medium=Share&utm_source=shortUrl"
+                  className="text-white bg-thered font-bold text-lg md:text-xl py-3 px-6 hover:scale-105 hover:bg-opacity-90 ease-in-out duration-300 font-squid rounded-full"
+                >
                   Register
-                </button>
+                </Link>
               </div>
             )}
           </div>
