@@ -102,9 +102,7 @@ const HeroSection = () => {
             />
             {showText && (
               <div className="flex gap-4 justify-center mt-6">
-                <button className="text-white bg-thered font-bold text-lg md:text-xl py-3 px-6 hover:scale-105 hover:bg-opacity-90 ease-in-out duration-300 font-squid rounded-full">
-                  Know More
-                </button>
+              
                 <Link
                   href="https://unstop.com/o/ZGc2Wi6?lb=aUcskOfj&utm_medium=Share&utm_source=shortUrl"
                   className="text-white bg-thered font-bold text-lg md:text-xl py-3 px-6 hover:scale-105 hover:bg-opacity-90 ease-in-out duration-300 font-squid rounded-full"

@@ -39,40 +39,44 @@ const Domains = () => {
                 />
               </div>
 
-              <h2 className="text-3xl text-white pt-8 font-squid">WEB Developement</h2>
+              <h2 className="text-3xl text-white pt-8 font-squid">
+                WEB Developement
+              </h2>
             </div>
           </FadeInSection>
           <div className="md:w-96 w-72 text-center">
-          <FadeInSection>
-            <div className="md:w-96 md:h-96 w-72 h-72 shadow-lg shadow-yellow-700 hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-yellow-700 rounded-full">
-              <Image
-                src="/blockchain_cookie.png"
-                width={1000}
-                height={1000}
-                alt="blockchain"
-              />
-            </div>
-            <h2 className="text-3xl text-white pt-8 font-squid">Blockchain</h2>
-          </FadeInSection>
+            <FadeInSection>
+              <div className="md:w-96 md:h-96 w-72 h-72 shadow-lg shadow-yellow-700 hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-yellow-700 rounded-full">
+                <Image
+                  src="/blockchain_cookie.png"
+                  width={1000}
+                  height={1000}
+                  alt="blockchain"
+                />
+              </div>
+              <h2 className="text-3xl text-white pt-8 font-squid">
+                Blockchain
+              </h2>
+            </FadeInSection>
           </div>
           <div className="md:w-96 w-72 text-center">
-          <FadeInSection>
-            <div className="md:w-96 md:h-96 w-72 h-72 shadow-lg shadow-yellow-700 hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-yellow-700 rounded-full">
-              <Image
-                src="/aiml_cookie.png"
-                width={1000}
-                height={1000}
-                alt="aiml"
-              />
-            </div>
-            <h2 className="text-3xl text-white pt-8 font-squid">AIML</h2>
+            <FadeInSection>
+              <div className="md:w-96 md:h-96 w-72 h-72 shadow-lg shadow-yellow-700 hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-yellow-700 rounded-full">
+                <Image
+                  src="/aiml_cookie.png"
+                  width={1000}
+                  height={1000}
+                  alt="aiml"
+                />
+              </div>
+              <h2 className="text-3xl text-white pt-8 font-squid">AIML</h2>
             </FadeInSection>
           </div>
         </div>
         <FadeInSection>
-        <button className="md:-translate-y-20 text-white bg-thegreen font-bold md:text-xl py-4 md:my-0 mt-10 hover:scale-105 hover:bg-opacity-75 ease-in-out duration-300 px-6 font-squid rounded-full  ">
-          Problem Statements
-        </button>
+          <button className="md:-translate-y-20 text-white hidden bg-thegreen font-bold md:text-xl py-4 md:my-0 mt-10 hover:scale-105 hover:bg-opacity-75 ease-in-out duration-300 px-6 font-squid rounded-full  ">
+            Problem Statements
+          </button>
         </FadeInSection>
       </div>
     </div>

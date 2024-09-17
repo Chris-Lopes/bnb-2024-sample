@@ -238,7 +238,6 @@ export const NavBar = (): JSX.Element => {
           >
             Contact Us
           </a>
-          <LanguageDropdown />
         </div>
       )}
     </div>

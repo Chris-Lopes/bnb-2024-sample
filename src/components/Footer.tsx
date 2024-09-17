@@ -49,14 +49,31 @@ export const Footer = (): JSX.Element => {
               Feedback
             </p>
           </div>
-          <div className="mt-6 md:mt-0">
+          <div className="space-y-3 flex flex-col">
+            <h3 className="text-white font-bold mb-3">About GDSC</h3>
             <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://developers.google.com/community-guidelines"
-              className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
+              href="https://developers.google.com/community/gdsc"
+              className="hover:text-white transition-colors duration-300"
             >
-              Google Community Guidelines
+              GDSC
+            </a>
+            <a
+              href="https://developers.google.com/community-guidelines"
+              className="hover:text-white transition-colors duration-300"
+            >
+              Community Guidelines
+            </a>
+            <a
+              href="https://gdg.community.dev/"
+              className="hover:text-white transition-colors duration-300"
+            >
+              Connect
+            </a>
+            <a
+              href="https://developers.google.com/community/gdsc/resources"
+              className="hover:text-white transition-colors duration-300"
+            >
+              Fr.CRCE
             </a>
           </div>
         </div>
