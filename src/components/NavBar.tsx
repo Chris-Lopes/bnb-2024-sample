@@ -65,7 +65,7 @@ export const NavBar = (): JSX.Element => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
+  }, [handleScroll, lastScrollY]);
 
   return (
     <div
@@ -75,7 +75,9 @@ export const NavBar = (): JSX.Element => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <img className="w-24 h-auto" alt="Logo" src="/logo.png" />
+          <Link href="/">
+            <img className="w-24 h-auto" alt="Logo" src="/logo.png" />
+          </Link>
         </div>
         <div className="md:hidden flex gap-4 items-center">
           <Link

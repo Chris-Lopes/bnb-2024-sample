@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Timeline } from "./acctimeline";
 
@@ -14,35 +13,35 @@ export function TimelineDemo() {
     // },
     {
       title: "Internal State Rounds",
-      content: <p className="">12 October - 13 October</p>,
-    },
-    // {
-    //   title: "Internal State Rounds End",
-    //   content: <p className="">13 October</p>,
-    // },
-    {
-      title: "Final Round Inauguration Ceremony Begins",
-      content: <p className="">26th October 2 pm</p>,
+      content: <p className="">Live - 13 October</p>,
     },
     {
-      title: "Hacking Begins",
-      content: <p className="">26th October 2:30 pm</p>,
+      title: "RELEASE OF PROBLEM STATEMENT [Maharashtra]",
+      content: <p className="">12TH OCTOBER 4:30 PM</p>,
     },
     {
-      title: "Mentoring Session",
-      content: <p className="">26th October 7 pm</p>,
+      title: "HACKATHON BEGINS",
+      content: <p className="">12TH OCTOBER 5:00 PM</p>,
     },
     {
-      title: "Dinner Break",
-      content: <p className="">26th October 9 pm</p>,
+      title: "SUBMIT YOUR GITHUB REPOSITORY",
+      content: <p className="">12TH OCTOBER 5:00 PM - 6:00 PM</p>,
     },
     {
-      title: "Hacking Ends",
-      content: <p className="">27th October 11 am</p>,
+      title: "MENTORING SESSION BEGINS",
+      content: <p className="">12TH OCTOBER 9:00 PM</p>,
     },
     {
-      title: "Final Round Cosing Ceremony Begins",
-      content: <p className="">27th October 4 pm</p>,
+      title: "JUDGING ROUNDS 1 &2",
+      content: <p className="">13TH OCTOBER 9:00 AM</p>,
+    },
+    {
+      title: "RESULT DECLARATION",
+      content: <p className="">13TH OCTOBER 5:00 PM</p>,
+    },
+    {
+      title: "HACKATHON ENDS",
+      content: <p className="">13TH OCTOBER 5:00 PM</p>,
     },
   ];
   return (
