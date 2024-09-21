@@ -8,76 +8,69 @@ export const Footer = (): JSX.Element => {
       id="contact"
       className="relative w-full bg-black text-center md:text-left text-gray-400 pb-10"
     >
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between mb-10 mt-6 md:mt-0 text-gray-400">
-          <div className="space-y-3 flex-col flex ">
-            <h3 className="text-white font-bold mb-3">GDSC - CRCE</h3>
-            <a
-              href="https://gdsc-crce.vercel.app/#home"
-              className="hover:text-white transition-colors duration-300"
-            >
-              About
-            </a>
-            <a
-              href="https://gdsc-crce.vercel.app/#events"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Event
-            </a>
-            <a
-              href="https://gdsc-crce.vercel.app/#team"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Team
-            </a>
-            <p className="hover:text-white transition-colors duration-300">
-              Gallery
-            </p>
+      <div className="container mx-auto px-4 py-8 text-gray-400">
+        <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:px-64">
+          <div className="flex flex-col space-y-4">
+            <h3 className="text-white font-bold font-sharp text-lg md:text-2xl ">
+              GDSC - CRCE
+            </h3>
+            <nav className="flex flex-col space-y-2">
+              <a
+                href="https://gdsc-crce.vercel.app/#home"
+                className="hover:text-white transition-colors duration-300"
+              >
+                About
+              </a>
+              <a
+                href="https://gdsc-crce.vercel.app/#events"
+                className="hover:text-white transition-colors duration-300"
+              >
+                Event
+              </a>
+              <a
+                href="https://gdsc-crce.vercel.app/#team"
+                className="hover:text-white transition-colors duration-300"
+              >
+                Team
+              </a>
+              <p className="hover:text-white transition-colors duration-300 cursor-pointer">
+                Gallery
+              </p>
+            </nav>
           </div>
-          <div className="space-y-3 flex flex-col">
-            <h3 className="text-white font-bold mb-3">Resources</h3>
-            <p className="hover:text-white transition-colors duration-300">
-              Problem Statements
-            </p>
-            <p className="hover:text-white transition-colors duration-300">
-              Regional Representatives
-            </p>
-            <p className="hover:text-white transition-colors duration-300">
-              Contact Regional Rep
-            </p>
-            <p className="hover:text-white transition-colors duration-300">
-              Feedback
-            </p>
-          </div>
-          <div className="space-y-3 flex flex-col">
-            <h3 className="text-white font-bold mb-3">About GDSC</h3>
-            <a
-              href="https://developers.google.com/community/gdsc"
-              className="hover:text-white transition-colors duration-300"
-            >
-              GDSC
-            </a>
-            <a
-              href="https://developers.google.com/community-guidelines"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Community Guidelines
-            </a>
-            <a
-              href="https://gdg.community.dev/"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Connect
-            </a>
-            <a
-              href="https://developers.google.com/community/gdsc/resources"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Fr.CRCE
-            </a>
+          <div className="flex flex-col space-y-4">
+            <h3 className="text-white font-bold font-sharp text-lg md:text-2xl ">
+              ABOUT GDSC
+            </h3>
+            <nav className="flex flex-col space-y-2">
+              <a
+                href="https://developers.google.com/community/gdsc"
+                className="hover:text-white transition-colors duration-300"
+              >
+                GDSC
+              </a>
+              <a
+                href="https://developers.google.com/community-guidelines"
+                className="hover:text-white transition-colors duration-300"
+              >
+                Community Guidelines
+              </a>
+              <a
+                href="https://gdg.community.dev/"
+                className="hover:text-white transition-colors duration-300"
+              >
+                Connect
+              </a>
+              <a
+                href="https://developers.google.com/community/gdsc/resources"
+                className="hover:text-white transition-colors duration-300"
+              >
+                Fr.CRCE
+              </a>
+            </nav>
           </div>
         </div>
-        <div className="border-t border-gray-700 py-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-700 py-10 mt-8 flex flex-col md:flex-row justify-between items-center">
           <Link
             href="https://gdsc-crce.vercel.app/"
             target="_blank"
