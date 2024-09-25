@@ -4,6 +4,7 @@ import React, { useEffect, useState, useCallback, useMemo } from "react";
 import Image from "next/image";
 import { ReactTyped } from "react-typed";
 import Link from "next/link";
+import RegistrationPopup from "./popUp";
 
 interface TimeLeft {
   days: number;
@@ -102,13 +103,7 @@ const HeroSection = () => {
             />
             {showText && (
               <div className="flex gap-4 justify-center mt-6">
-              
-                <Link
-                  href="https://unstop.com/o/ZGc2Wi6?lb=aUcskOfj&utm_medium=Share&utm_source=shortUrl"
-                  className="text-white bg-thered font-bold text-lg md:text-xl py-3 px-6 hover:scale-105 hover:bg-opacity-90 ease-in-out duration-300 font-squid rounded-full"
-                >
-                  Register
-                </Link>
+                <RegistrationPopup />
               </div>
             )}
           </div>

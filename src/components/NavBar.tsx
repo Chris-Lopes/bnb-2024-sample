@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { LanguageDropdown } from "./LanguageDropdown";
+import RegistrationPopup2 from "./popUp2";
 
 export const NavBar = (): JSX.Element => {
   const [showNav, setShowNav] = useState(true);
@@ -69,7 +70,7 @@ export const NavBar = (): JSX.Element => {
 
   return (
     <div
-      className={`fixed w-full text-white py-4 bg-opacity-60 bg-black transition-transform duration-300 z-50 ${
+      className={`fixed w-full text-white py-4 bg-opacity-60 bg-black transition-transform duration-300 z-40 ${
         showNav ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -80,12 +81,7 @@ export const NavBar = (): JSX.Element => {
           </Link>
         </div>
         <div className="md:hidden flex gap-4 items-center">
-          <Link
-            href="https://unstop.com/o/ZGc2Wi6?lb=aUcskOfj&utm_medium=Share&utm_source=shortUrl"
-            className="bg-slate-200 text-black cursor-pointer font-medium px-4 py-2 rounded-xl hover:bg-slate-300 transition-colors duration-200"
-          >
-            Register
-          </Link>
+          <RegistrationPopup2 />
           <button
             onClick={toggleMobileMenu}
             className="text-white focus:outline-none"
@@ -160,12 +156,7 @@ export const NavBar = (): JSX.Element => {
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Link
-            href="https://unstop.com/o/ZGc2Wi6?lb=aUcskOfj&utm_medium=Share&utm_source=shortUrl"
-            className="bg-slate-200 text-black cursor-pointer font-medium px-4 py-2 rounded-xl hover:bg-slate-300 transition-colors duration-200"
-          >
-            Register
-          </Link>
+          <RegistrationPopup2 />
         </div>
       </div>
       {/* Mobile Menu */}
