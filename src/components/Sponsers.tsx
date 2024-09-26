@@ -80,10 +80,10 @@ const Sponsers = () => {
               </span>
             </h2>
 
-            <div className="flex justify-center space-x-4 mt-4 mx-4">
-              <div className="max-w-full mx-auto h-1/5">
+            <div className="flex justify-center max-md:items-center  md:flex-row flex-col md:space-x-4 mt-4 mx-4">
+              <div className="max-w-full mx-auto h-1/5 justify-center">
                 <Image
-                  src="/devfolio.png"
+                  src="/sponsors/devfolio.png"
                   alt="DEVFOLIO LOGO"
                   width={500}
                   height={500}
@@ -91,7 +91,7 @@ const Sponsers = () => {
                 />
               </div>
 
-              <div className="max-w-full mx-auto h-1/5">
+              <div className="max-w-full mx-auto h-1/5 justify-center">
                 <Image
                   src="/sponsors/eth.png"
                   alt="ETHINDIA LOGO"
@@ -100,7 +100,7 @@ const Sponsers = () => {
                   quality={100}
                 />
               </div>
-              <div className="max-w-full mx-auto h-1/5">
+              <div className="max-w-full mx-auto h-1/5 justify-center">
                 <Image
                   src="/sponsors/polygon.png"
                   alt="POLYGON LOGO"
