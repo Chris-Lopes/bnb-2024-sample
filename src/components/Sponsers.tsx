@@ -83,6 +83,16 @@ const Sponsers = () => {
             <div className="flex justify-center space-x-4 mt-4 mx-4">
               <div className="max-w-full mx-auto h-1/5">
                 <Image
+                  src="/devfolio.png"
+                  alt="DEVFOLIO LOGO"
+                  width={500}
+                  height={500}
+                  quality={100}
+                />
+              </div>
+
+              <div className="max-w-full mx-auto h-1/5">
+                <Image
                   src="/sponsors/eth.png"
                   alt="ETHINDIA LOGO"
                   width={500}
