@@ -14,67 +14,46 @@ const Domains = () => {
     filter: "brightness(0.15)",
   };
 
+  const domains = [
+    { name: "WEB Development", image: "/web_app_cookie.png" },
+    { name: "Blockchain", image: "/blockchain_cookie.png" },
+    { name: "AIML", image: "/aiml_cookie.png" },
+  ];
+
   return (
     <div id="domains" className="relative">
       <div
-        className="absolute inset-0  bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center"
         style={backgroundStyle}
       ></div>
-
-      <div className="relative flex flex-col justify-center items-center">
+      <div className="relative flex flex-col justify-center items-center py-20">
         <PopFadeInSection>
-          <h1 className="md:text-8xl text-white text-6xl md:pb-4 pb-10 md:translate-y-20 text-center font-squid ">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl text-white pb-10 md:pb-16 text-center font-squid">
             Domains
           </h1>
         </PopFadeInSection>
-        <div className="relative min-h-screen flex flex-col md:gap-0 gap-10 md:flex-row items-center container mx-auto justify-between ">
-          <FadeInSection>
-            <div className="md:w-96 w-fit md:translate-y-[20px]  text-center">
-              <div className="md:w-96 md:h-96 w-72 h-72 shadow-lg mx-auto shadow-yellow-700 hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-yellow-700 rounded-full">
-                <Image
-                  src="/web_app_cookie.png"
-                  width={1000}
-                  height={1000}
-                  alt="web-app-dev"
-                />
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-10 md:gap-8 container mx-auto px-4">
+          {domains.map((domain, index) => (
+            <FadeInSection key={index}>
+              <div className="text-center">
+                <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 mx-auto shadow-lg shadow-yellow-700 hover:scale-105 ease-in-out duration-300 hover:shadow-xl hover:shadow-yellow-600 rounded-full overflow-hidden">
+                  <Image
+                    src={domain.image}
+                    width={1000}
+                    height={1000}
+                    alt={domain.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h2 className="text-2xl md:text-3xl text-white pt-6 font-squid">
+                  {domain.name}
+                </h2>
               </div>
-
-              <h2 className="text-3xl text-white pt-8 font-squid">
-                WEB Developement
-              </h2>
-            </div>
-          </FadeInSection>
-          <div className="md:w-96 w-72 text-center">
-            <FadeInSection>
-              <div className="md:w-96 md:h-96 w-72 h-72 shadow-lg shadow-yellow-700 hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-yellow-700 rounded-full">
-                <Image
-                  src="/blockchain_cookie.png"
-                  width={1000}
-                  height={1000}
-                  alt="blockchain"
-                />
-              </div>
-              <h2 className="text-3xl text-white pt-8 font-squid">
-                Blockchain
-              </h2>
             </FadeInSection>
-          </div>
-          <div className="md:w-96 w-72 text-center">
-            <FadeInSection>
-              <div className="md:w-96 md:h-96 w-72 h-72 shadow-lg shadow-yellow-700 hover:scale-105 ease-in-out duration-300 hover:shadow-lg hover:shadow-yellow-700 rounded-full">
-                <Image
-                  src="/aiml_cookie.png"
-                  width={1000}
-                  height={1000}
-                  alt="aiml"
-                />
-              </div>
-              <h2 className="text-3xl text-white pt-8 font-squid">AIML</h2>
-            </FadeInSection>
-          </div>
+          ))}
         </div>
         <FadeInSection>
-          <button className="md:-translate-y-20 text-white hidden bg-thegreen font-bold md:text-xl py-4 md:my-0 mt-10 hover:scale-105 hover:bg-opacity-75 ease-in-out duration-300 px-6 font-squid rounded-full  ">
+          <button className="text-white bg-thegreen font-bold text-lg md:text-xl py-3 px-6 mt-16 md:mt-20 hover:scale-105 hover:bg-opacity-75 ease-in-out duration-300 font-squid rounded-full">
             Problem Statements
           </button>
         </FadeInSection>

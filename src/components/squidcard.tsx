@@ -13,9 +13,8 @@ const Card: React.FC<CardProps> = ({ frontcontent, backcontent }) => {
   return (
     <>
       <div
-        className={`relative md:w-[21vw] md:h-[24vh] w-[75vw] h-[19vh] card cursor-pointer ${
-          isFlipped ? "card-front-flip" : "card-back-flip"
-        }`}
+        className={`relative md:w-[21vw] md:h-[24vh] w-[75vw] h-[19vh] card cursor-pointer ${isFlipped ? "card-front-flip" : "card-back-flip"
+          }`}
         onClick={handleFFlip}
       >
         {
