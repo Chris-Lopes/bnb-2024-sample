@@ -2,6 +2,7 @@ import React from "react";
 import PopFadeInSection from "./PopFadeInSection";
 import FadeInSection from "./FadeInSection";
 import Image from "next/image";
+import Link from "next/link";
 const prevsponsers = [
   { name: "RedBull", image: "/sponsors/RB.jpg" },
   { name: "368", image: "/sponsors/368.png" },
@@ -80,34 +81,40 @@ const Sponsers = () => {
               </span>
             </h2>
 
-            <div className="flex justify-center max-md:items-center  md:flex-row flex-col md:space-x-4 mt-4 mx-4">
+            <div className="flex justify-center max-md:items-center space-y-2 md:flex-row flex-col md:space-x-4 mt-4 mx-4">
               <div className="max-w-full mx-auto h-1/5 justify-center">
-                <Image
-                  src="/sponsors/devfolio.png"
-                  alt="DEVFOLIO LOGO"
-                  width={500}
-                  height={500}
-                  quality={100}
-                />
+                <Link href="https://devfolio.co">
+                  <Image
+                    src="/sponsors/devfolio.png"
+                    alt="DEVFOLIO LOGO"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>
               </div>
 
               <div className="max-w-full mx-auto h-1/5 justify-center">
-                <Image
-                  src="/sponsors/eth.png"
-                  alt="ETHINDIA LOGO"
-                  width={500}
-                  height={500}
-                  quality={100}
-                />
+                <Link href="https://ethindia.co">
+                  <Image
+                    src="/sponsors/eth.png"
+                    alt="ETHINDIA LOGO"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>
               </div>
               <div className="max-w-full mx-auto h-1/5 justify-center">
-                <Image
-                  src="/sponsors/polygon.png"
-                  alt="POLYGON LOGO"
-                  width={500}
-                  height={500}
-                  quality={100}
-                />
+                <Link href="https://polygon.technology">
+                  <Image
+                    src="/sponsors/polygon.png"
+                    alt="POLYGON LOGO"
+                    width={500}
+                    height={500}
+                    quality={100}
+                  />
+                </Link>
               </div>
             </div>
           </FadeInSection>
