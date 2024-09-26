@@ -24,7 +24,7 @@ export default function Home() {
     // Simulate a data fetch
     setTimeout(() => {
       setLoading(false);
-    }, 5200); // n-second delay to simulate loading
+    }, 0); // n-second delay to simulate loading
   }, []);
 
   if (loading) {
