@@ -23,8 +23,8 @@ const RegistrationPopup2 = () => {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <button className="text-white bg-thered font-bold text-lg md:text-xl py-3 px-6 hover:scale-105 hover:bg-opacity-90 ease-in-out duration-300 font-squid rounded-full">
-          Register Now
+        <button className="bg-slate-200 text-black cursor-pointer font-medium px-4 py-2 rounded-xl hover:bg-slate-300 transition-colors duration-200">
+          Register
         </button>
       </Dialog.Trigger>
       <Dialog.Portal>
