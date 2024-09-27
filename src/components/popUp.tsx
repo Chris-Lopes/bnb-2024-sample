@@ -1,9 +1,8 @@
 "use client";
-import React, { useEffect, useRef } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import { X } from "lucide-react";
-import { University } from "lucide-react";
+import { University, X } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 const RegistrationPopup = () => {
   const applyButtonRef = useRef<HTMLDivElement>(null);
@@ -46,7 +45,7 @@ const RegistrationPopup = () => {
               <div
                 ref={applyButtonRef}
                 className="apply-button "
-                data-hackathon-slug="YOUR-HACKATHON-SLUG"
+                data-hackathon-slug="bit-n-build-crce"
                 data-button-theme="light"
                 style={{ height: "44px", width: "312px" }}
               ></div>{" "}
