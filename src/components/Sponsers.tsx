@@ -90,6 +90,7 @@ const Sponsers = () => {
                     width={500}
                     height={500}
                     quality={100}
+                    priority
                   />
                 </Link>
               </div>
@@ -102,6 +103,7 @@ const Sponsers = () => {
                     width={500}
                     height={500}
                     quality={100}
+                    priority
                   />
                 </Link>
               </div>
@@ -113,6 +115,7 @@ const Sponsers = () => {
                     width={500}
                     height={500}
                     quality={100}
+                    priority
                   />
                 </Link>
               </div>
@@ -142,22 +145,22 @@ const Sponsers = () => {
               Previous Sponsors
             </h2>
           </PopFadeInSection>
-          <div className="md:grid flex flex-col grid-cols-2 md:gap-8 md:grid-cols-4 ">
-            {prevsponsers.map((sponsor) => (
-              <div
-                key={sponsor.name}
-                className="col-span-1 flex justify-center items-center bg-transparent p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-              >
-                <FadeInSection>
-                  <img
-                    className="h-full max-w-full object-contain md:w-full w-[90vw]"
-                    src={sponsor.image}
-                    alt={sponsor.name}
-                  />
-                </FadeInSection>
-              </div>
-            ))}
-          </div>
+          {/* <div className="md:grid flex flex-col grid-cols-2 md:gap-8 md:grid-cols-4 ">
+  {prevsponsers.map((sponsor) => (
+    <div
+      key={sponsor.name}
+      className="col-span-1 flex justify-center items-center bg-transparent p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+    >
+      <FadeInSection>
+        <img
+          className="h-full max-w-full object-contain md:w-full w-[90vw]"
+          src={sponsor.image}
+          alt={sponsor.name}
+        />
+      </FadeInSection>
+    </div>
+  ))}
+</div> */}
         </div>
       </div>
     </div>

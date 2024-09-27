@@ -1,21 +1,25 @@
 // components/Loading.js
-'use client'
-import dynamic from 'next/dynamic';
-import React, { useState, useEffect } from 'react';
+"use client";
+import dynamic from "next/dynamic";
+import React, { useState, useEffect } from "react";
 
-const Loading = dynamic(() => import('../components/LoadingComponent'), { ssr: false });
+const Loading = dynamic(() => import("../components/LoadingComponent"), {
+  ssr: false,
+});
 
 const LoadingComponent = () => {
-  const [fade, setFade] = useState('fade-in');
+  const [fade, setFade] = useState("fade-in");
 
   useEffect(() => {
     // After n seconds, trigger fade-out effect
-    const timeout = setTimeout(() => setFade('fade-out'), 4600);
+    const timeout = setTimeout(() => setFade("fade-out"), 0);
     return () => clearTimeout(timeout);
   }, []);
 
   return (
-    <div className={`flex h-screen text-white items-center justify-center ${fade}`}>
+    <div
+      className={`flex h-screen text-white items-center justify-center ${fade}`}
+    >
       <Loading />
       <style jsx>{`
         .fade-in {
