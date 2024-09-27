@@ -18,7 +18,7 @@ import Loading from "./loading";
 import ContactUs from "@/components/contactUs";
 //style={{ backgroundImage: 'url("/actualBg.png")', }}
 export default function Home() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // Simulate a data fetch
