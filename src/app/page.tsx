@@ -27,9 +27,9 @@ export default function Home() {
     }, 0); // n-second delay to simulate loading
   }, []);
 
-  if (loading) {
+  /*  if (loading) {
     return <Loading />;
-  }
+  } */
 
   return (
     <main>
@@ -46,13 +46,10 @@ export default function Home() {
         />
       </div>
       <Domains />
-
-      <div>
-        <TimelineDemo />
-      </div>
+      <div>{/* <TimelineDemo /> */}</div>
       <Prizes />
-      <ContactUs />
       <Sponsers />
+      <ContactUs />
 
       <Faq />
     </main>
