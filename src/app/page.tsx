@@ -34,7 +34,6 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-
       <div>
         <AboutUs
           imageUrl="/Map_wrap.png"
@@ -45,13 +44,15 @@ export default function Home() {
           ]}
         />
       </div>
-      <Domains />
+      {/*  <Domains />
+       */}
       <div>{/* <TimelineDemo /> */}</div>
-      <Prizes />
+      {/*   <Prizes /> */}
       <Sponsers />
-      <ContactUs />
+      {/*      <ContactUs />
 
       <Faq />
+  */}{" "}
     </main>
   );
 }
