@@ -77,13 +77,6 @@ const RegistrationPopup2 = () => {
               >
                 <button className="w-full text-white bg-thered font-bold md:text-lg text-base py-3 px-6 hover:scale-105 hover:bg-opacity-90 ease-in-out duration-300 font-squid rounded-full mt-4 flex items-center justify-center">
                   <span className="mr-2">Register </span>
-                  <Image
-                    src="/unstop.png"
-                    alt="Unstop Logo"
-                    width={60}
-                    height={60}
-                    className="object-contain"
-                  />
                 </button>
               </a>
             </div>
